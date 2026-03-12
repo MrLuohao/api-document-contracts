@@ -11,80 +11,6 @@ controller:
     file: "src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java"
 
 methods:
-  - operationId: "user.innerapi.aiAgent.getOpenPlatformAdminInformation"
-    summary: "记录小程序端用户的Open ID + Union ID"
-    description: "执行Getopenplatformadmininformation并返回Object"
-    intentAliases:
-      - "记录小程序端用户的Open ID + Union ID"
-      - "getOpenPlatformAdminInformation"
-      - "Object"
-      - "WechatOpenPlatformParam"
-      - "get"
-      - "Open"
-      - "Platform"
-      - "Admin"
-      - "Information"
-    tags:
-      - "aiAgent"
-      - "getOpenPlatformAdminInformation"
-      - "WechatOpenPlatformParam"
-      - "Object"
-    httpMethod: "POST"
-    path: "/getOpenPlatformAdminInformation"
-    request:
-      headers: []
-      pathParams: []
-      queryParams: []
-      parts: []
-      body:
-        type: "WechatOpenPlatformParam"
-        required: true
-        description: "getOpenPlatformAdminInformation 请求体"
-    response:
-      envelopeType: "com.dst.steed.common.domain.response.Response"
-      dataType: "Object"
-      description: "Getopenplatformadmininformation执行结果"
-    dtoSchemas:
-      requestTypes:
-        - name: "WechatOpenPlatformParam"
-          fields:
-            - name: "appId"
-              type: "String"
-              required: true
-              constraints: ["@NotEmpty"]
-              description: "应用的唯一标识符"
-            - name: "code"
-              type: "String"
-              required: true
-              constraints: ["@NotEmpty"]
-              description: "用户授权后返回的临时授权码"
-            - name: "phoneCode"
-              type: "String"
-              required: false
-              constraints: []
-              description: "用户小程序手机号码授权后返回的临时授权码 (如果是明文手机号则直接传明文手机号)"
-            - name: "userId"
-              type: "String"
-              required: false
-              constraints: []
-              description: "用户ID"
-      responseTypes:
-        []
-    errors: []
-    examples:
-      requestBody:
-      successResponse:
-        code: "000000"
-        msg: "success"
-        data: []
-      errorResponses: []
-    sourceCodeMethod:
-      className: "WechatPlatformInformationController"
-      methodName: "getOpenPlatformAdminInformation"
-      signature: "getOpenPlatformAdminInformation(WechatOpenPlatformParam param)"
-    sourceMeta:
-      owner: "luohao"
-      ownerSource: "git-blame-mapping"
   - operationId: "user.innerapi.aiAgent.getAllInformation"
     summary: "获取用户在企业开放平台的所有相关信息"
     description: "执行Getall并返回AllInformation"
@@ -426,6 +352,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -477,6 +404,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -592,6 +520,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -670,6 +599,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -744,6 +674,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -818,6 +749,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -894,6 +826,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -962,6 +895,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -971,6 +905,138 @@ methods:
       className: "WechatPlatformInformationController"
       methodName: "getCorpTagList"
       signature: "getCorpTagList(GetCorpTagListParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.testExternalContactChangeMq"
+    summary: "用于在生产环境验证MQ发送是否正常，无需走完整流程"
+    description: "执行TestExternalcontactchangemq并返回Object"
+    intentAliases:
+      - "用于在生产环境验证MQ发送是否正常，无需走完整流程"
+      - "testExternalContactChangeMq"
+      - "Object"
+      - "ExternalContactTestParam"
+      - "test"
+      - "externalContactChangeMq"
+      - "External"
+      - "Contact"
+      - "Change"
+      - "Mq"
+    tags:
+      - "aiAgent"
+      - "testExternalContactChangeMq"
+      - "test"
+      - "externalContactChangeMq"
+      - "ExternalContactTestParam"
+      - "Object"
+    httpMethod: "POST"
+    path: "/test/externalContactChangeMq"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "ExternalContactTestParam"
+        required: true
+        description: "testExternalContactChangeMq 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "TestExternalcontactchangemq执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "ExternalContactTestParam"
+          fields:
+            - name: "externalUserid"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部客户的externalUserid (日志中的creator字段)"
+            - name: "unionId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部联系人在微信开放平台的唯一身份标识"
+            - name: "nickName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "微信昵称或企业微信对外展示名"
+            - name: "gender"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "性别 0-未知 1-男性 2-女性"
+            - name: "avatar"
+              type: "String"
+              required: false
+              constraints: []
+              description: "头像"
+            - name: "type"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "外部联系人类型 1-微信用户 2-企业微信用户"
+            - name: "corpName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部联系人所在企业的简称"
+            - name: "followUserId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "跟进人的userid"
+            - name: "followUserRemark"
+              type: "String"
+              required: false
+              constraints: []
+              description: "成员对客户的备注"
+            - name: "followUserDescription"
+              type: "String"
+              required: false
+              constraints: []
+              description: "成员对客户的描述"
+            - name: "followUserCreateTime"
+              type: "String"
+              required: false
+              constraints: []
+              description: "添加客户时间 (格式: yyyy-MM-dd HH:mm:ss)"
+            - name: "followUserRemarkMobiles"
+              type: "String"
+              required: false
+              constraints: []
+              description: "备注的手机号码"
+            - name: "followUserAddWay"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "添加来源 (来源定义查看企业微信官方文档)"
+            - name: "locked"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "状态 0-正常 1-已删除"
+            - name: "changeType"
+              type: "String"
+              required: false
+              constraints: []
+              description: "变更类型 add/update"
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "testExternalContactChangeMq"
+      signature: "testExternalContactChangeMq(ExternalContactTestParam param)"
     sourceMeta:
       owner: "luohao"
       ownerSource: "git-blame-mapping"

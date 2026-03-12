@@ -13,81 +13,9 @@
 
 ---
 
-## 1. 记录小程序端用户的Open ID + Union ID
+## 1. 获取用户在企业开放平台的所有相关信息
 
 ### 1.1 基本信息
-
-| 项目 | 内容 |
-|------|------|
-| operationId | `user.innerapi.aiAgent.getOpenPlatformAdminInformation` |
-| 请求方法 | `POST` |
-| 请求路径 | `/v2/wechat/getOpenPlatformAdminInformation` |
-| 简要描述 | `执行Getopenplatformadmininformation并返回Object` |
-
-### 1.2 请求参数
-
-#### Body 参数
-
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `appId` | `String` | ✅ | 应用的唯一标识符 |
-| `code` | `String` | ✅ | 用户授权后返回的临时授权码 |
-| `phoneCode` | `String` | ❌ | 用户小程序手机号码授权后返回的临时授权码 (如果是明文手机号则直接传明文手机号) |
-| `userId` | `String` | ❌ | 用户ID |
-
-### 1.3 响应结构
-
-| 项目 | 内容 |
-|------|------|
-| 统一包装 | `com.dst.steed.common.domain.response.Response` |
-| data 类型 | `Object` |
-| 说明 | `Getopenplatformadmininformation执行结果` |
-
-### 1.4 Feign Client 定义
-
-```java
-@FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
-public interface WechatPlatformInformationClientApi {
-
-    @PostMapping("/v2/wechat/getOpenPlatformAdminInformation")
-    Response<Object> getOpenPlatformAdminInformation(@RequestBody WechatOpenPlatformParam query);
-}
-```
-
-### 1.5 DTO 定义
-
-#### WechatOpenPlatformParam
-
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `appId` | `String` | ✅ | 应用的唯一标识符 |
-| `code` | `String` | ✅ | 用户授权后返回的临时授权码 |
-| `phoneCode` | `String` | ❌ | 用户小程序手机号码授权后返回的临时授权码 (如果是明文手机号则直接传明文手机号) |
-| `userId` | `String` | ❌ | 用户ID |
-
-### 1.6 示例
-
-```json
-{}
-```
-
-### 1.7 业务校验规则
-
-无业务错误定义。
-
-### 1.8 源码定位
-
-| 项目 | 内容 |
-|------|------|
-| 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `getOpenPlatformAdminInformation(WechatOpenPlatformParam param)` |
-| 接口 owner | `luohao` |
-
----
-
-## 2. 获取用户在企业开放平台的所有相关信息
-
-### 2.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
@@ -96,7 +24,7 @@ public interface WechatPlatformInformationClientApi {
 | 请求路径 | `/v2/wechat/getAll` |
 | 简要描述 | `执行Getall并返回AllInformation` |
 
-### 2.2 请求参数
+### 1.2 请求参数
 
 #### Body 参数
 
@@ -106,7 +34,7 @@ public interface WechatPlatformInformationClientApi {
 | `openId` | `String` | ❌ | 用户在单个应用的唯一标识符 |
 | `phone` | `String` | ❌ | 电话 |
 
-### 2.3 响应结构
+### 1.3 响应结构
 
 | 项目 | 内容 |
 |------|------|
@@ -114,7 +42,7 @@ public interface WechatPlatformInformationClientApi {
 | data 类型 | `AllInformationDTO` |
 | 说明 | `Getall执行结果` |
 
-### 2.4 Feign Client 定义
+### 1.4 Feign Client 定义
 
 ```java
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
@@ -125,7 +53,7 @@ public interface WechatPlatformInformationClientApi {
 }
 ```
 
-### 2.5 DTO 定义
+### 1.5 DTO 定义
 
 #### FindInformationParam
 
@@ -215,10 +143,66 @@ public interface WechatPlatformInformationClientApi {
 | `memberVersion` | `String` | ❌ | 群成员版本号 |
 | `locked` | `Integer` | ❌ | 状态 0-正常 1-已删除 |
 
+### 1.6 示例
+
+```json
+null
+```
+
+### 1.7 业务校验规则
+
+无业务错误定义。
+
+### 1.8 源码定位
+
+| 项目 | 内容 |
+|------|------|
+| 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
+| 方法签名 | `getAllInformation(FindInformationParam param)` |
+| 接口 owner | `luohao` |
+
+---
+
+## 2. 删除重复的openId
+
+### 2.1 基本信息
+
+| 项目 | 内容 |
+|------|------|
+| operationId | `user.innerapi.aiAgent.delRepeatOpenId` |
+| 请求方法 | `POST` |
+| 请求路径 | `/v2/wechat/del` |
+| 简要描述 | `执行Del并返回Object` |
+
+### 2.2 请求参数
+
+无请求参数。
+
+### 2.3 响应结构
+
+| 项目 | 内容 |
+|------|------|
+| 统一包装 | `com.dst.steed.common.domain.response.Response` |
+| data 类型 | `Object` |
+| 说明 | `Del执行结果` |
+
+### 2.4 Feign Client 定义
+
+```java
+@FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
+public interface WechatPlatformInformationClientApi {
+
+    @PostMapping("/v2/wechat/del")
+    Response<Object> delRepeatOpenId();
+}
+```
+
+### 2.5 DTO 定义
+
 ### 2.6 示例
 
 ```json
-{}
+null
 ```
 
 ### 2.7 业务校验规则
@@ -230,25 +214,30 @@ public interface WechatPlatformInformationClientApi {
 | 项目 | 内容 |
 |------|------|
 | 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `getAllInformation(FindInformationParam param)` |
+| 方法签名 | `delRepeatOpenId()` |
 | 接口 owner | `luohao` |
 
 ---
 
-## 3. 删除重复的openId
+## 3. 同步某个公众号端所有用户的openID + union ID
 
 ### 3.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
-| operationId | `user.innerapi.aiAgent.delRepeatOpenId` |
-| 请求方法 | `POST` |
-| 请求路径 | `/v2/wechat/del` |
-| 简要描述 | `执行Del并返回Object` |
+| operationId | `user.innerapi.aiAgent.getOfficialAccountAdmins` |
+| 请求方法 | `GET` |
+| 请求路径 | `/v2/wechat/getOfficialAccountAdmins` |
+| 简要描述 | `查询Getofficialaccountadmins详情并返回Object` |
 
 ### 3.2 请求参数
 
-无请求参数。
+#### Query 参数
+
+| 字段名 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| `appId` | `String` | ✅ | appId |
+
 
 ### 3.3 响应结构
 
@@ -256,7 +245,7 @@ public interface WechatPlatformInformationClientApi {
 |------|------|
 | 统一包装 | `com.dst.steed.common.domain.response.Response` |
 | data 类型 | `Object` |
-| 说明 | `Del执行结果` |
+| 说明 | `Getofficialaccountadmins详情` |
 
 ### 3.4 Feign Client 定义
 
@@ -264,8 +253,8 @@ public interface WechatPlatformInformationClientApi {
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
 public interface WechatPlatformInformationClientApi {
 
-    @PostMapping("/v2/wechat/del")
-    Response<Object> delRepeatOpenId();
+    @GetMapping("/v2/wechat/getOfficialAccountAdmins")
+    Response<Object> getOfficialAccountAdmins(@RequestParam(value = "appId", required = true) String appId);
 }
 ```
 
@@ -274,7 +263,7 @@ public interface WechatPlatformInformationClientApi {
 ### 3.6 示例
 
 ```json
-{}
+{"appId":"value"}
 ```
 
 ### 3.7 业务校验规则
@@ -286,30 +275,29 @@ public interface WechatPlatformInformationClientApi {
 | 项目 | 内容 |
 |------|------|
 | 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `delRepeatOpenId()` |
+| 方法签名 | `getOfficialAccountAdmins(String appId)` |
 | 接口 owner | `luohao` |
 
 ---
 
-## 4. 同步某个公众号端所有用户的openID + union ID
+## 4. 记录企业微信端用户的External_userID + Union ID
 
 ### 4.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
-| operationId | `user.innerapi.aiAgent.getOfficialAccountAdmins` |
-| 请求方法 | `GET` |
-| 请求路径 | `/v2/wechat/getOfficialAccountAdmins` |
-| 简要描述 | `查询Getofficialaccountadmins详情并返回Object` |
+| operationId | `user.innerapi.aiAgent.getWeComAdminInformation` |
+| 请求方法 | `POST` |
+| 请求路径 | `/v2/wechat/getWeComAdminInformation` |
+| 简要描述 | `执行Getwecomadmininformation并返回Object` |
 
 ### 4.2 请求参数
 
-#### Query 参数
+#### Body 参数
 
 | 字段名 | 类型 | 必填 | 说明 |
 |--------|------|------|------|
-| `appId` | `String` | ✅ | appId |
-
+| `corpName` | `String` | ✅ | 企微绑定的应用名称 |
 
 ### 4.3 响应结构
 
@@ -317,7 +305,7 @@ public interface WechatPlatformInformationClientApi {
 |------|------|
 | 统一包装 | `com.dst.steed.common.domain.response.Response` |
 | data 类型 | `Object` |
-| 说明 | `Getofficialaccountadmins详情` |
+| 说明 | `Getwecomadmininformation执行结果` |
 
 ### 4.4 Feign Client 定义
 
@@ -325,17 +313,23 @@ public interface WechatPlatformInformationClientApi {
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
 public interface WechatPlatformInformationClientApi {
 
-    @GetMapping("/v2/wechat/getOfficialAccountAdmins")
-    Response<Object> getOfficialAccountAdmins(@RequestParam(value = "appId", required = true) String appId);
+    @PostMapping("/v2/wechat/getWeComAdminInformation")
+    Response<Object> getWeComAdminInformation(@RequestBody WeComInformationParam query);
 }
 ```
 
 ### 4.5 DTO 定义
 
+#### WeComInformationParam
+
+| 字段名 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| `corpName` | `String` | ✅ | 企微绑定的应用名称 |
+
 ### 4.6 示例
 
 ```json
-{"appId":"value"}
+null
 ```
 
 ### 4.7 业务校验规则
@@ -347,21 +341,21 @@ public interface WechatPlatformInformationClientApi {
 | 项目 | 内容 |
 |------|------|
 | 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `getOfficialAccountAdmins(String appId)` |
+| 方法签名 | `getWeComAdminInformation(WeComInformationParam param)` |
 | 接口 owner | `luohao` |
 
 ---
 
-## 5. 记录企业微信端用户的External_userID + Union ID
+## 5. 获取因内部成员离职待分配的外部客户信息
 
 ### 5.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
-| operationId | `user.innerapi.aiAgent.getWeComAdminInformation` |
+| operationId | `user.innerapi.aiAgent.getUnassignedList` |
 | 请求方法 | `POST` |
-| 请求路径 | `/v2/wechat/getWeComAdminInformation` |
-| 简要描述 | `执行Getwecomadmininformation并返回Object` |
+| 请求路径 | `/v2/wechat/getUnassignedList` |
+| 简要描述 | `执行Getunassignedlist并返回HandoverToBeAllocated` |
 
 ### 5.2 请求参数
 
@@ -376,76 +370,10 @@ public interface WechatPlatformInformationClientApi {
 | 项目 | 内容 |
 |------|------|
 | 统一包装 | `com.dst.steed.common.domain.response.Response` |
-| data 类型 | `Object` |
-| 说明 | `Getwecomadmininformation执行结果` |
-
-### 5.4 Feign Client 定义
-
-```java
-@FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
-public interface WechatPlatformInformationClientApi {
-
-    @PostMapping("/v2/wechat/getWeComAdminInformation")
-    Response<Object> getWeComAdminInformation(@RequestBody WeComInformationParam query);
-}
-```
-
-### 5.5 DTO 定义
-
-#### WeComInformationParam
-
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `corpName` | `String` | ✅ | 企微绑定的应用名称 |
-
-### 5.6 示例
-
-```json
-{}
-```
-
-### 5.7 业务校验规则
-
-无业务错误定义。
-
-### 5.8 源码定位
-
-| 项目 | 内容 |
-|------|------|
-| 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `getWeComAdminInformation(WeComInformationParam param)` |
-| 接口 owner | `luohao` |
-
----
-
-## 6. 获取因内部成员离职待分配的外部客户信息
-
-### 6.1 基本信息
-
-| 项目 | 内容 |
-|------|------|
-| operationId | `user.innerapi.aiAgent.getUnassignedList` |
-| 请求方法 | `POST` |
-| 请求路径 | `/v2/wechat/getUnassignedList` |
-| 简要描述 | `执行Getunassignedlist并返回HandoverToBeAllocated` |
-
-### 6.2 请求参数
-
-#### Body 参数
-
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `corpName` | `String` | ✅ | 企微绑定的应用名称 |
-
-### 6.3 响应结构
-
-| 项目 | 内容 |
-|------|------|
-| 统一包装 | `com.dst.steed.common.domain.response.Response` |
 | data 类型 | `HandoverToBeAllocatedDTO` |
 | 说明 | `Getunassignedlist执行结果` |
 
-### 6.4 Feign Client 定义
+### 5.4 Feign Client 定义
 
 ```java
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
@@ -456,7 +384,7 @@ public interface WechatPlatformInformationClientApi {
 }
 ```
 
-### 6.5 DTO 定义
+### 5.5 DTO 定义
 
 #### WeComInformationParam
 
@@ -473,17 +401,17 @@ public interface WechatPlatformInformationClientApi {
 | `handoverUserIds` | `List<String>` | ❌ |  |
 | `externalUserIds` | `List<String>` | ❌ |  |
 
-### 6.6 示例
+### 5.6 示例
 
 ```json
-{}
+null
 ```
 
-### 6.7 业务校验规则
+### 5.7 业务校验规则
 
 无业务错误定义。
 
-### 6.8 源码定位
+### 5.8 源码定位
 
 | 项目 | 内容 |
 |------|------|
@@ -493,9 +421,9 @@ public interface WechatPlatformInformationClientApi {
 
 ---
 
-## 7. 根据用户id 查询尘锋关联信息
+## 6. 根据用户id 查询尘锋关联信息
 
-### 7.1 基本信息
+### 6.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
@@ -504,7 +432,7 @@ public interface WechatPlatformInformationClientApi {
 | 请求路径 | `/v2/wechat/getByUserId` |
 | 简要描述 | `执行Getbyuserid并返回DustEdgeRelation` |
 
-### 7.2 请求参数
+### 6.2 请求参数
 
 #### Body 参数
 
@@ -512,7 +440,7 @@ public interface WechatPlatformInformationClientApi {
 |--------|------|------|------|
 | `userIds` | `List<String>` | ✅ | 车上云用户 ID |
 
-### 7.3 响应结构
+### 6.3 响应结构
 
 | 项目 | 内容 |
 |------|------|
@@ -520,7 +448,7 @@ public interface WechatPlatformInformationClientApi {
 | data 类型 | `List<DustEdgeRelationVO>` |
 | 说明 | `Getbyuserid执行结果` |
 
-### 7.4 Feign Client 定义
+### 6.4 Feign Client 定义
 
 ```java
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
@@ -531,7 +459,7 @@ public interface WechatPlatformInformationClientApi {
 }
 ```
 
-### 7.5 DTO 定义
+### 6.5 DTO 定义
 
 #### DustEdgeRelationQuery
 
@@ -547,17 +475,17 @@ public interface WechatPlatformInformationClientApi {
 | `customerId` | `String` | ❌ | 尘锋 customer_id |
 | `unionId` | `String` | ❌ | 外部联系人在微信开放平台的唯一身份标识 |
 
-### 7.6 示例
+### 6.6 示例
 
 ```json
-{}
+null
 ```
 
-### 7.7 业务校验规则
+### 6.7 业务校验规则
 
 无业务错误定义。
 
-### 7.8 源码定位
+### 6.8 源码定位
 
 | 项目 | 内容 |
 |------|------|
@@ -567,9 +495,9 @@ public interface WechatPlatformInformationClientApi {
 
 ---
 
-## 8. 从给定的跟进人列表中，返回添加外部联系人最少的跟进人 user_id
+## 7. 从给定的跟进人列表中，返回添加外部联系人最少的跟进人 user_id
 
-### 8.1 基本信息
+### 7.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
@@ -578,7 +506,7 @@ public interface WechatPlatformInformationClientApi {
 | 请求路径 | `/v2/wechat/getFollowUserId` |
 | 简要描述 | `执行Getfollowuserid并返回MinFollowUserId` |
 
-### 8.2 请求参数
+### 7.2 请求参数
 
 #### Body 参数
 
@@ -587,7 +515,7 @@ public interface WechatPlatformInformationClientApi {
 | `followUserIds` | `List<String>` | ✅ | 跟进人 userid列表 |
 | `corpName` | `String` | ❌ | 企业微信企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业 |
 
-### 8.3 响应结构
+### 7.3 响应结构
 
 | 项目 | 内容 |
 |------|------|
@@ -595,7 +523,7 @@ public interface WechatPlatformInformationClientApi {
 | data 类型 | `MinFollowUserIdDTO` |
 | 说明 | `Getfollowuserid执行结果` |
 
-### 8.4 Feign Client 定义
+### 7.4 Feign Client 定义
 
 ```java
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
@@ -606,7 +534,7 @@ public interface WechatPlatformInformationClientApi {
 }
 ```
 
-### 8.5 DTO 定义
+### 7.5 DTO 定义
 
 #### FollowUserIdsParam
 
@@ -622,17 +550,17 @@ public interface WechatPlatformInformationClientApi {
 | `followUserId` | `String` | ❌ | 跟进人user_id |
 | `qrCodeUrl` | `String` | ❌ | 企业微信「联系我」二维码链接客户扫描此二维码可添加该跟进人 |
 
-### 8.6 示例
+### 7.6 示例
 
 ```json
-{}
+null
 ```
 
-### 8.7 业务校验规则
+### 7.7 业务校验规则
 
 无业务错误定义。
 
-### 8.8 源码定位
+### 7.8 源码定位
 
 | 项目 | 内容 |
 |------|------|
@@ -642,9 +570,9 @@ public interface WechatPlatformInformationClientApi {
 
 ---
 
-## 9. 为外部联系人（客户）打标签
+## 8. 为外部联系人（客户）打标签
 
-### 9.1 基本信息
+### 8.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
@@ -653,7 +581,7 @@ public interface WechatPlatformInformationClientApi {
 | 请求路径 | `/v2/wechat/markTag` |
 | 简要描述 | `执行Marktag并返回Object` |
 
-### 9.2 请求参数
+### 8.2 请求参数
 
 #### Body 参数
 
@@ -665,7 +593,7 @@ public interface WechatPlatformInformationClientApi {
 | `add_tag` | `List<String>` | ❌ | 要添加的标签ID列表add_tag和remove_tag不可同时为空 |
 | `remove_tag` | `List<String>` | ❌ | 要移除的标签ID列表add_tag和remove_tag不可同时为空 |
 
-### 9.3 响应结构
+### 8.3 响应结构
 
 | 项目 | 内容 |
 |------|------|
@@ -673,7 +601,7 @@ public interface WechatPlatformInformationClientApi {
 | data 类型 | `Object` |
 | 说明 | `Marktag执行结果` |
 
-### 9.4 Feign Client 定义
+### 8.4 Feign Client 定义
 
 ```java
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
@@ -684,7 +612,7 @@ public interface WechatPlatformInformationClientApi {
 }
 ```
 
-### 9.5 DTO 定义
+### 8.5 DTO 定义
 
 #### MarkTagParam
 
@@ -696,10 +624,80 @@ public interface WechatPlatformInformationClientApi {
 | `add_tag` | `List<String>` | ❌ | 要添加的标签ID列表add_tag和remove_tag不可同时为空 |
 | `remove_tag` | `List<String>` | ❌ | 要移除的标签ID列表add_tag和remove_tag不可同时为空 |
 
+### 8.6 示例
+
+```json
+null
+```
+
+### 8.7 业务校验规则
+
+无业务错误定义。
+
+### 8.8 源码定位
+
+| 项目 | 内容 |
+|------|------|
+| 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
+| 方法签名 | `markTag(MarkTagParam param)` |
+| 接口 owner | `luohao` |
+
+---
+
+## 9. 获取企业标签库列表
+
+### 9.1 基本信息
+
+| 项目 | 内容 |
+|------|------|
+| operationId | `user.innerapi.aiAgent.getCorpTagList` |
+| 请求方法 | `POST` |
+| 请求路径 | `/v2/wechat/getCorpTagList` |
+| 简要描述 | `执行Getcorptaglist并返回Object` |
+
+### 9.2 请求参数
+
+#### Body 参数
+
+| 字段名 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| `corpName` | `String` | ❌ | 企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业 |
+| `tag_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
+| `group_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
+
+### 9.3 响应结构
+
+| 项目 | 内容 |
+|------|------|
+| 统一包装 | `com.dst.steed.common.domain.response.Response` |
+| data 类型 | `Object` |
+| 说明 | `Getcorptaglist执行结果` |
+
+### 9.4 Feign Client 定义
+
+```java
+@FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
+public interface WechatPlatformInformationClientApi {
+
+    @PostMapping("/v2/wechat/getCorpTagList")
+    Response<Object> getCorpTagList(@RequestBody GetCorpTagListParam query);
+}
+```
+
+### 9.5 DTO 定义
+
+#### GetCorpTagListParam
+
+| 字段名 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| `corpName` | `String` | ❌ | 企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业 |
+| `tag_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
+| `group_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
+
 ### 9.6 示例
 
 ```json
-{}
+null
 ```
 
 ### 9.7 业务校验规则
@@ -711,21 +709,21 @@ public interface WechatPlatformInformationClientApi {
 | 项目 | 内容 |
 |------|------|
 | 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `markTag(MarkTagParam param)` |
+| 方法签名 | `getCorpTagList(GetCorpTagListParam param)` |
 | 接口 owner | `luohao` |
 
 ---
 
-## 10. 获取企业标签库列表
+## 10. 用于在生产环境验证MQ发送是否正常，无需走完整流程
 
 ### 10.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
-| operationId | `user.innerapi.aiAgent.getCorpTagList` |
+| operationId | `user.innerapi.aiAgent.testExternalContactChangeMq` |
 | 请求方法 | `POST` |
-| 请求路径 | `/v2/wechat/getCorpTagList` |
-| 简要描述 | `执行Getcorptaglist并返回Object` |
+| 请求路径 | `/v2/wechat/test/externalContactChangeMq` |
+| 简要描述 | `执行TestExternalcontactchangemq并返回Object` |
 
 ### 10.2 请求参数
 
@@ -733,9 +731,21 @@ public interface WechatPlatformInformationClientApi {
 
 | 字段名 | 类型 | 必填 | 说明 |
 |--------|------|------|------|
-| `corpName` | `String` | ❌ | 企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业 |
-| `tag_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
-| `group_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
+| `externalUserid` | `String` | ❌ | 外部客户的externalUserid (日志中的creator字段) |
+| `unionId` | `String` | ❌ | 外部联系人在微信开放平台的唯一身份标识 |
+| `nickName` | `String` | ❌ | 微信昵称或企业微信对外展示名 |
+| `gender` | `Integer` | ❌ | 性别 0-未知 1-男性 2-女性 |
+| `avatar` | `String` | ❌ | 头像 |
+| `type` | `Integer` | ❌ | 外部联系人类型 1-微信用户 2-企业微信用户 |
+| `corpName` | `String` | ❌ | 外部联系人所在企业的简称 |
+| `followUserId` | `String` | ❌ | 跟进人的userid |
+| `followUserRemark` | `String` | ❌ | 成员对客户的备注 |
+| `followUserDescription` | `String` | ❌ | 成员对客户的描述 |
+| `followUserCreateTime` | `String` | ❌ | 添加客户时间 (格式: yyyy-MM-dd HH:mm:ss) |
+| `followUserRemarkMobiles` | `String` | ❌ | 备注的手机号码 |
+| `followUserAddWay` | `Integer` | ❌ | 添加来源 (来源定义查看企业微信官方文档) |
+| `locked` | `Integer` | ❌ | 状态 0-正常 1-已删除 |
+| `changeType` | `String` | ❌ | 变更类型 add/update |
 
 ### 10.3 响应结构
 
@@ -743,7 +753,7 @@ public interface WechatPlatformInformationClientApi {
 |------|------|
 | 统一包装 | `com.dst.steed.common.domain.response.Response` |
 | data 类型 | `Object` |
-| 说明 | `Getcorptaglist执行结果` |
+| 说明 | `TestExternalcontactchangemq执行结果` |
 
 ### 10.4 Feign Client 定义
 
@@ -751,20 +761,32 @@ public interface WechatPlatformInformationClientApi {
 @FeignClient(name = "dst-user-core-service", contextId = "WechatPlatformInformationClientApi")
 public interface WechatPlatformInformationClientApi {
 
-    @PostMapping("/v2/wechat/getCorpTagList")
-    Response<Object> getCorpTagList(@RequestBody GetCorpTagListParam query);
+    @PostMapping("/v2/wechat/test/externalContactChangeMq")
+    Response<Object> testExternalContactChangeMq(@RequestBody ExternalContactTestParam query);
 }
 ```
 
 ### 10.5 DTO 定义
 
-#### GetCorpTagListParam
+#### ExternalContactTestParam
 
 | 字段名 | 类型 | 必填 | 说明 |
 |--------|------|------|------|
-| `corpName` | `String` | ❌ | 企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业 |
-| `tag_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
-| `group_id` | `List<String>` | ❌ | 标签组ID列表不传则获取全部标签组 |
+| `externalUserid` | `String` | ❌ | 外部客户的externalUserid (日志中的creator字段) |
+| `unionId` | `String` | ❌ | 外部联系人在微信开放平台的唯一身份标识 |
+| `nickName` | `String` | ❌ | 微信昵称或企业微信对外展示名 |
+| `gender` | `Integer` | ❌ | 性别 0-未知 1-男性 2-女性 |
+| `avatar` | `String` | ❌ | 头像 |
+| `type` | `Integer` | ❌ | 外部联系人类型 1-微信用户 2-企业微信用户 |
+| `corpName` | `String` | ❌ | 外部联系人所在企业的简称 |
+| `followUserId` | `String` | ❌ | 跟进人的userid |
+| `followUserRemark` | `String` | ❌ | 成员对客户的备注 |
+| `followUserDescription` | `String` | ❌ | 成员对客户的描述 |
+| `followUserCreateTime` | `String` | ❌ | 添加客户时间 (格式: yyyy-MM-dd HH:mm:ss) |
+| `followUserRemarkMobiles` | `String` | ❌ | 备注的手机号码 |
+| `followUserAddWay` | `Integer` | ❌ | 添加来源 (来源定义查看企业微信官方文档) |
+| `locked` | `Integer` | ❌ | 状态 0-正常 1-已删除 |
+| `changeType` | `String` | ❌ | 变更类型 add/update |
 
 ### 10.6 示例
 
@@ -781,5 +803,5 @@ public interface WechatPlatformInformationClientApi {
 | 项目 | 内容 |
 |------|------|
 | 源码文件 | `src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java` |
-| 方法签名 | `getCorpTagList(GetCorpTagListParam param)` |
+| 方法签名 | `testExternalContactChangeMq(ExternalContactTestParam param)` |
 | 接口 owner | `luohao` |
