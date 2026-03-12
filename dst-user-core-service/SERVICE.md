@@ -1,9 +1,9 @@
 ---
-domain: "user-center"
+domain: "user"
 service: "dst-user-core-service"
 
 owner:
-  name: "罗豪"
+  name: "luohao"
   contact: "[optional wecom/email]"
 
 updatedAt: "2026-03-12"
@@ -37,10 +37,10 @@ troubleshootingNotes:
 
 ## 基本信息
 
-- 域：`user-center`
+- 域：`user`
 - 服务名：`dst-user-core-service`
 - 状态：`active`
-- 项目 owner：`罗豪`
+- 项目 owner：`luohao`
 - 联系方式：`[optional wecom/email]`
 - 最近更新时间：`2026-03-12`
 

@@ -11,6 +11,80 @@ controller:
     file: "src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java"
 
 methods:
+  - operationId: "user.innerapi.aiAgent.getOpenPlatformAdminInformation"
+    summary: "记录小程序端用户的Open ID + Union ID"
+    description: "执行Getopenplatformadmininformation并返回Object"
+    intentAliases:
+      - "记录小程序端用户的Open ID + Union ID"
+      - "getOpenPlatformAdminInformation"
+      - "Object"
+      - "WechatOpenPlatformParam"
+      - "get"
+      - "Open"
+      - "Platform"
+      - "Admin"
+      - "Information"
+    tags:
+      - "aiAgent"
+      - "getOpenPlatformAdminInformation"
+      - "WechatOpenPlatformParam"
+      - "Object"
+    httpMethod: "POST"
+    path: "/getOpenPlatformAdminInformation"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "WechatOpenPlatformParam"
+        required: true
+        description: "getOpenPlatformAdminInformation 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Getopenplatformadmininformation执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "WechatOpenPlatformParam"
+          fields:
+            - name: "appId"
+              type: "String"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "应用的唯一标识符"
+            - name: "code"
+              type: "String"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "用户授权后返回的临时授权码"
+            - name: "phoneCode"
+              type: "String"
+              required: false
+              constraints: []
+              description: "用户小程序手机号码授权后返回的临时授权码 (如果是明文手机号则直接传明文手机号)"
+            - name: "userId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "用户ID"
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getOpenPlatformAdminInformation"
+      signature: "getOpenPlatformAdminInformation(WechatOpenPlatformParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
   - operationId: "user.innerapi.aiAgent.getAllInformation"
     summary: "获取用户在企业开放平台的所有相关信息"
     description: "执行Getall并返回AllInformation"
@@ -1028,6 +1102,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"

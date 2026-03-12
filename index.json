@@ -2,7 +2,7 @@
   "services": [
     {
       "service": "dst-user-core-service",
-      "owner": "罗豪",
+      "owner": "luohao",
       "contact": "[optional wecom/email]"
     }
   ],
@@ -625,6 +625,59 @@
         "Admins",
         "aiAgent",
         "String"
+      ]
+    },
+    {
+      "operationId": "user.innerapi.aiAgent.getOpenPlatformAdminInformation",
+      "service": "dst-user-core-service",
+      "controllerName": "WechatPlatformInformationController",
+      "httpMethod": "POST",
+      "path": "/v2/wechat/getOpenPlatformAdminInformation",
+      "summary": "记录小程序端用户的Open ID + Union ID",
+      "description": "执行Getopenplatformadmininformation并返回Object",
+      "intentAliases": [
+        "记录小程序端用户的Open ID + Union ID",
+        "getOpenPlatformAdminInformation",
+        "Object",
+        "WechatOpenPlatformParam",
+        "get",
+        "Open",
+        "Platform",
+        "Admin",
+        "Information"
+      ],
+      "tags": [
+        "aiAgent",
+        "getOpenPlatformAdminInformation",
+        "WechatOpenPlatformParam",
+        "Object"
+      ],
+      "owner": "luohao",
+      "specPath": "dst-user-core-service/WechatPlatformInformationController/WechatPlatformInformationController.spec.yaml",
+      "searchTerms": [
+        "记录小程序端用户的Open ID + Union ID",
+        "执行Getopenplatformadmininformation并返回Object",
+        "user.innerapi.aiAgent.getOpenPlatformAdminInformation",
+        "WechatPlatformInformationController",
+        "dst-user-core-service",
+        "getOpenPlatformAdminInformation",
+        "Object",
+        "WechatOpenPlatformParam",
+        "get",
+        "Open",
+        "Platform",
+        "Admin",
+        "Information",
+        "aiAgent",
+        "appId",
+        "String",
+        "应用的唯一标识符",
+        "code",
+        "用户授权后返回的临时授权码",
+        "phoneCode",
+        "用户小程序手机号码授权后返回的临时授权码 (如果是明文手机号则直接传明文手机号)",
+        "userId",
+        "用户ID"
       ]
     },
     {
