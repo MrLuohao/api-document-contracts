@@ -78,7 +78,7 @@ public interface FoundationAdminClientApi {
 ### 1.6 示例
 
 ```json
-{}
+null
 ```
 
 ### 1.7 业务校验规则
@@ -179,93 +179,9 @@ public interface FoundationAdminClientApi {
 
 ---
 
-## 3. 根据用户ID修改个人用户工号
+## 3. 记录个人名称变更日志
 
 ### 3.1 基本信息
-
-| 项目 | 内容 |
-|------|------|
-| operationId | `user-center.business.aiAgent.modifyJobNumber` |
-| 请求方法 | `@RequestMapping` |
-| 请求路径 | `/foundation/admin/modifyJobNumber` |
-| 简要描述 | `处理Modifyjobnumber并返回Object` |
-
-### 3.2 请求参数
-
-#### Body 参数
-
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `adminId` | `String` | ✅ | 用户ID |
-| `realName` | `String` | ❌ | 用户姓名 |
-| `urlFront` | `String` | ❌ | 身份证正面照片URL |
-| `urlBack` | `String` | ❌ | 身份证反面照片URL |
-| `cardId` | `String` | ❌ | 身份证号 |
-| `channel` | `String` | ✅ | 接口调用方 |
-| `modifierId` | `Long` | ❌ | 修改人id |
-| `modifierName` | `String` | ❌ | 修改人名称 |
-| `modifyTime` | `Date` | ❌ | 修改时间 |
-| `jobNumber` | `String` | ❌ | 用户工号 |
-
-### 3.3 响应结构
-
-| 项目 | 内容 |
-|------|------|
-| 统一包装 | `com.dst.steed.common.domain.response.Response` |
-| data 类型 | `Object` |
-| 说明 | `Modifyjobnumber返回结果` |
-
-### 3.4 Feign Client 定义
-
-```java
-@FeignClient(name = "dst-user-core-service", contextId = "FoundationAdminClientApi")
-public interface FoundationAdminClientApi {
-
-    @RequestMapping("/foundation/admin/modifyJobNumber")
-    Response<Object> modifyJobNumber(@RequestBody ModifyAdminParam query);
-}
-```
-
-### 3.5 DTO 定义
-
-#### ModifyAdminParam
-
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `adminId` | `String` | ✅ | 用户ID |
-| `realName` | `String` | ❌ | 用户姓名 |
-| `urlFront` | `String` | ❌ | 身份证正面照片URL |
-| `urlBack` | `String` | ❌ | 身份证反面照片URL |
-| `cardId` | `String` | ❌ | 身份证号 |
-| `channel` | `String` | ✅ | 接口调用方 |
-| `modifierId` | `Long` | ❌ | 修改人id |
-| `modifierName` | `String` | ❌ | 修改人名称 |
-| `modifyTime` | `Date` | ❌ | 修改时间 |
-| `jobNumber` | `String` | ❌ | 用户工号 |
-
-### 3.6 示例
-
-```json
-"None"
-```
-
-### 3.7 业务校验规则
-
-无业务错误定义。
-
-### 3.8 源码定位
-
-| 项目 | 内容 |
-|------|------|
-| 源码文件 | `src/main/java/com/dst/user/core/modules/business/foundation/controller/FoundationAdminController.java` |
-| 方法签名 | `modifyJobNumber(ModifyAdminParam param)` |
-| 接口 owner | `luohao` |
-
----
-
-## 4. 记录个人名称变更日志
-
-### 4.1 基本信息
 
 | 项目 | 内容 |
 |------|------|
@@ -274,7 +190,7 @@ public interface FoundationAdminClientApi {
 | 请求路径 | `/foundation/admin/logAdminChangeInfo` |
 | 简要描述 | `执行Logadminchangeinfo并返回Object` |
 
-### 4.2 请求参数
+### 3.2 请求参数
 
 #### Body 参数
 
@@ -285,7 +201,7 @@ public interface FoundationAdminClientApi {
 | `channel` | `String` | ❌ | 渠道 |
 | `unifyLogEvent` | `String` | ❌ | 统一日志事件 |
 
-### 4.3 响应结构
+### 3.3 响应结构
 
 | 项目 | 内容 |
 |------|------|
@@ -293,7 +209,7 @@ public interface FoundationAdminClientApi {
 | data 类型 | `Object` |
 | 说明 | `Logadminchangeinfo执行结果` |
 
-### 4.4 Feign Client 定义
+### 3.4 Feign Client 定义
 
 ```java
 @FeignClient(name = "dst-user-core-service", contextId = "FoundationAdminClientApi")
@@ -304,7 +220,7 @@ public interface FoundationAdminClientApi {
 }
 ```
 
-### 4.5 DTO 定义
+### 3.5 DTO 定义
 
 #### AdminLogParam
 
@@ -371,17 +287,17 @@ public interface FoundationAdminClientApi {
 | `modifierName` | `String` | ❌ |  |
 | `modifyTime` | `Date` | ❌ |  |
 
-### 4.6 示例
+### 3.6 示例
 
 ```json
 "None"
 ```
 
-### 4.7 业务校验规则
+### 3.7 业务校验规则
 
 无业务错误定义。
 
-### 4.8 源码定位
+### 3.8 源码定位
 
 | 项目 | 内容 |
 |------|------|

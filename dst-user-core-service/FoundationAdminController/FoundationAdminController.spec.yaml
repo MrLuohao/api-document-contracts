@@ -112,6 +112,7 @@ methods:
     errors: []
     examples:
       requestBody:
+        None
       successResponse:
         code: "000000"
         msg: "success"
@@ -224,109 +225,6 @@ methods:
       className: "FoundationAdminController"
       methodName: "modifyAdminInformation"
       signature: "modifyAdminInformation(ModifyAdminParam param)"
-    sourceMeta:
-      owner: "luohao"
-      ownerSource: "git-blame-mapping"
-  - operationId: "user-center.business.aiAgent.modifyJobNumber"
-    summary: "根据用户ID修改个人用户工号"
-    description: "处理Modifyjobnumber并返回Object"
-    intentAliases:
-      - "根据用户ID修改个人用户工号"
-      - "modifyJobNumber"
-      - "Object"
-      - "ModifyAdminParam"
-      - "modify"
-      - "Job"
-      - "Number"
-    tags:
-      - "aiAgent"
-      - "modifyJobNumber"
-      - "ModifyAdminParam"
-      - "Object"
-    httpMethod: "REQUEST"
-    path: "/modifyJobNumber"
-    request:
-      headers: []
-      pathParams: []
-      queryParams: []
-      parts: []
-      body:
-        type: "ModifyAdminParam"
-        required: true
-        description: "modifyJobNumber 请求体"
-    response:
-      envelopeType: "com.dst.steed.common.domain.response.Response"
-      dataType: "Object"
-      description: "Modifyjobnumber返回结果"
-    dtoSchemas:
-      requestTypes:
-        - name: "ModifyAdminParam"
-          fields:
-            - name: "adminId"
-              type: "String"
-              required: true
-              constraints: ["@NotEmpty"]
-              description: "用户ID"
-            - name: "realName"
-              type: "String"
-              required: false
-              constraints: []
-              description: "用户姓名"
-            - name: "urlFront"
-              type: "String"
-              required: false
-              constraints: []
-              description: "身份证正面照片URL"
-            - name: "urlBack"
-              type: "String"
-              required: false
-              constraints: []
-              description: "身份证反面照片URL"
-            - name: "cardId"
-              type: "String"
-              required: false
-              constraints: []
-              description: "身份证号"
-            - name: "channel"
-              type: "String"
-              required: true
-              constraints: ["@NotEmpty"]
-              description: "接口调用方"
-            - name: "modifierId"
-              type: "Long"
-              required: false
-              constraints: []
-              description: "修改人id"
-            - name: "modifierName"
-              type: "String"
-              required: false
-              constraints: []
-              description: "修改人名称"
-            - name: "modifyTime"
-              type: "Date"
-              required: false
-              constraints: []
-              description: "修改时间"
-            - name: "jobNumber"
-              type: "String"
-              required: false
-              constraints: []
-              description: "用户工号"
-      responseTypes:
-        []
-    errors: []
-    examples:
-      requestBody:
-        None
-      successResponse:
-        code: "000000"
-        msg: "success"
-        data: []
-      errorResponses: []
-    sourceCodeMethod:
-      className: "FoundationAdminController"
-      methodName: "modifyJobNumber"
-      signature: "modifyJobNumber(ModifyAdminParam param)"
     sourceMeta:
       owner: "luohao"
       ownerSource: "git-blame-mapping"
