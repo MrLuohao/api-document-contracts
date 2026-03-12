@@ -80,7 +80,7 @@ public interface FoundationAdminClientApi {
 ### 1.6 示例
 
 ```json
-null
+"None"
 ```
 
 ### 1.7 业务校验规则
@@ -164,7 +164,7 @@ public interface FoundationAdminClientApi {
 ### 2.6 示例
 
 ```json
-null
+"None"
 ```
 
 ### 2.7 业务校验规则
@@ -292,7 +292,7 @@ public interface FoundationAdminClientApi {
 ### 3.6 示例
 
 ```json
-null
+"None"
 ```
 
 ### 3.7 业务校验规则
