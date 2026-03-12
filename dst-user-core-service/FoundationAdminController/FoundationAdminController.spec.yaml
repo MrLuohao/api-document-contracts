@@ -11,6 +11,119 @@ controller:
     file: "src/main/java/com/dst/user/core/modules/business/foundation/controller/FoundationAdminController.java"
 
 methods:
+  - operationId: "user-center.business.aiAgent.getAdminInformation"
+    summary: "获取个人用户信息(统一入口)"
+    description: "处理Getadmininformation并返回AdminInformation"
+    intentAliases:
+      - "获取个人用户信息(统一入口)"
+      - "getAdminInformation"
+      - "List<AdminInformationVO>"
+      - "QueryAdminParam"
+      - "get"
+      - "Admin"
+      - "Information"
+    tags:
+      - "aiAgent"
+      - "getAdminInformation"
+      - "QueryAdminParam"
+      - "AdminInformationVO"
+    httpMethod: "REQUEST"
+    path: "/getAdminInformation"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "QueryAdminParam"
+        required: true
+        description: "getAdminInformation 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "List<AdminInformationVO>"
+      description: "Getadmininformation返回结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "QueryAdminParam"
+          fields:
+            - name: "adminIds"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: "个人用户id集合"
+      responseTypes:
+        - name: "AdminInformationVO"
+          fields:
+            - name: "id"
+              type: "String"
+              required: false
+              constraints: []
+              description: "个人用户id"
+            - name: "regChannel"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "注册渠道: 1.地上铁App 2.H5"
+            - name: "phone"
+              type: "String"
+              required: false
+              constraints: []
+              description: "手机号"
+            - name: "phoneMask"
+              type: "String"
+              required: false
+              constraints: []
+              description: ""
+            - name: "realname"
+              type: "String"
+              required: false
+              constraints: []
+              description: "姓名"
+            - name: "urlFront"
+              type: "String"
+              required: false
+              constraints: []
+              description: "身份证正面"
+            - name: "urlBack"
+              type: "String"
+              required: false
+              constraints: []
+              description: "身份证反面"
+            - name: "cardId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "身份证号"
+            - name: "reviewsStatus"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "认证状态: 1 认证中 2 已驳回 3 已认证 4未认证 5已过期"
+            - name: "modifierId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: "修改人id"
+            - name: "modifierName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "修改人名称"
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "FoundationAdminController"
+      methodName: "getAdminInformation"
+      signature: "getAdminInformation(QueryAdminParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
   - operationId: "user-center.business.aiAgent.modifyAdminInformation"
     summary: "修改个人用户信息(统一入口)"
     description: "处理Modifyadmininformation并返回Object"
