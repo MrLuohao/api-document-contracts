@@ -1,0 +1,976 @@
+domain: "user"
+service: "dst-user-core-service"
+apiLayer: "innerapi"
+
+controller:
+  name: "WechatPlatformInformationController"
+  basePath: "/v2/wechat"
+  owner: "luohao"
+  source:
+    repo: "/Users/luohao/Desktop/DST/user-center/dst-user-core-service"
+    file: "src/main/java/com/dst/user/core/modules/innerapi/weixin/controller/WechatPlatformInformationController.java"
+
+methods:
+  - operationId: "user.innerapi.aiAgent.getOpenPlatformAdminInformation"
+    summary: "记录小程序端用户的Open ID + Union ID"
+    description: "执行Getopenplatformadmininformation并返回Object"
+    intentAliases:
+      - "记录小程序端用户的Open ID + Union ID"
+      - "getOpenPlatformAdminInformation"
+      - "Object"
+      - "WechatOpenPlatformParam"
+      - "get"
+      - "Open"
+      - "Platform"
+      - "Admin"
+      - "Information"
+    tags:
+      - "aiAgent"
+      - "getOpenPlatformAdminInformation"
+      - "WechatOpenPlatformParam"
+      - "Object"
+    httpMethod: "POST"
+    path: "/getOpenPlatformAdminInformation"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "WechatOpenPlatformParam"
+        required: true
+        description: "getOpenPlatformAdminInformation 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Getopenplatformadmininformation执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "WechatOpenPlatformParam"
+          fields:
+            - name: "appId"
+              type: "String"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "应用的唯一标识符"
+            - name: "code"
+              type: "String"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "用户授权后返回的临时授权码"
+            - name: "phoneCode"
+              type: "String"
+              required: false
+              constraints: []
+              description: "用户小程序手机号码授权后返回的临时授权码 (如果是明文手机号则直接传明文手机号)"
+            - name: "userId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "用户ID"
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getOpenPlatformAdminInformation"
+      signature: "getOpenPlatformAdminInformation(WechatOpenPlatformParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getAllInformation"
+    summary: "获取用户在企业开放平台的所有相关信息"
+    description: "执行Getall并返回AllInformation"
+    intentAliases:
+      - "获取用户在企业开放平台的所有相关信息"
+      - "getAllInformation"
+      - "AllInformationDTO"
+      - "FindInformationParam"
+      - "getAll"
+      - "get"
+      - "All"
+      - "Information"
+    tags:
+      - "aiAgent"
+      - "getAllInformation"
+      - "getAll"
+      - "FindInformationParam"
+      - "AllInformationDTO"
+    httpMethod: "POST"
+    path: "/getAll"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "FindInformationParam"
+        required: true
+        description: "getAllInformation 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "AllInformationDTO"
+      description: "Getall执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "FindInformationParam"
+          fields:
+            - name: "unionId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "微信开放平台用户唯一标识"
+            - name: "openId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "用户在单个应用的唯一标识符"
+            - name: "phone"
+              type: "String"
+              required: false
+              constraints: []
+              description: "电话"
+      responseTypes:
+        - name: "AllInformationDTO"
+          fields:
+            - name: "openPlatforms"
+              type: "List<WechatOpenPlatform>"
+              required: false
+              constraints: []
+              description: "用户在企业微信开放平台相关信息"
+            - name: "externalContactRelations"
+              type: "List<ExternalContactRelation>"
+              required: false
+              constraints: []
+              description: "用户在企业微信中所添加的所有内部成员相关信息"
+            - name: "externalGroupRelations"
+              type: "List<ExternalGroupRelation>"
+              required: false
+              constraints: []
+              description: "用户在企业微信中所添加的所有内部群相关信息"
+        - name: "WechatOpenPlatform"
+          fields:
+            - name: "creatorId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: ""
+            - name: "creatorName"
+              type: "String"
+              required: false
+              constraints: []
+              description: ""
+            - name: "createTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: ""
+            - name: "modifierId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: ""
+            - name: "modifierName"
+              type: "String"
+              required: false
+              constraints: []
+              description: ""
+            - name: "modifyTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: ""
+            - name: "id"
+              type: "Long"
+              required: false
+              constraints: ["@TableId"]
+              description: "主键"
+            - name: "appId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "应用的唯一标识符"
+            - name: "openId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "用户在单个应用的唯一标识符"
+            - name: "userId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: "用户id"
+            - name: "unionId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "微信开放平台用户唯一标识"
+            - name: "phone"
+              type: "String"
+              required: false
+              constraints: ["@DstEncrypt"]
+              description: "手机号"
+            - name: "phoneMask"
+              type: "String"
+              required: false
+              constraints: []
+              description: "手机号掩码"
+            - name: "phoneEncrypt"
+              type: "String"
+              required: false
+              constraints: []
+              description: "手机号加密"
+            - name: "channel"
+              type: "String"
+              required: false
+              constraints: ["@TableField"]
+              description: "渠道"
+        - name: "BaseDO"
+          fields:
+            - name: "creatorId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: ""
+            - name: "creatorName"
+              type: "String"
+              required: false
+              constraints: []
+              description: ""
+            - name: "createTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: ""
+            - name: "modifierId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: ""
+            - name: "modifierName"
+              type: "String"
+              required: false
+              constraints: []
+              description: ""
+            - name: "modifyTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: ""
+        - name: "ExternalContactRelation"
+          fields:
+            - name: "id"
+              type: "Long"
+              required: false
+              constraints: ["@TableId"]
+              description: "主键ID"
+            - name: "externalUserid"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部客户的openID"
+            - name: "unionId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部联系人在微信开放平台的唯一身份标识"
+            - name: "nickName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "微信昵称或企业微信对外展示名"
+            - name: "gender"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "性别 0-未知 1-男性 2-女性"
+            - name: "avatar"
+              type: "String"
+              required: false
+              constraints: []
+              description: "头像"
+            - name: "type"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "外部联系人类型 1-微信用户 2-企业微信用户"
+            - name: "corpName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部联系人所在企业的简称"
+            - name: "followUserId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "跟进人的userid"
+            - name: "followUserRemark"
+              type: "String"
+              required: false
+              constraints: []
+              description: "成员对客户的备注"
+            - name: "followUserDescription"
+              type: "String"
+              required: false
+              constraints: []
+              description: "成员对客户的描述"
+            - name: "followUserCreateTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: "添加客户时间"
+            - name: "followUserRemarkMobiles"
+              type: "String"
+              required: false
+              constraints: []
+              description: "备注的手机号码"
+            - name: "followUserAddWay"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "添加来源 (来源定义查看企业微信官方文档)"
+            - name: "locked"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "状态 0-正常 1-已删除"
+        - name: "ExternalGroupRelation"
+          fields:
+            - name: "id"
+              type: "Long"
+              required: false
+              constraints: ["@TableId"]
+              description: "主键ID"
+            - name: "memberUserid"
+              type: "String"
+              required: false
+              constraints: []
+              description: "群成员id(external_userid)"
+            - name: "unionId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部联系人在微信开放平台的唯一身份标识"
+            - name: "chatId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "客户群ID"
+            - name: "chatName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "群名"
+            - name: "chatOwner"
+              type: "String"
+              required: false
+              constraints: []
+              description: "群主ID"
+            - name: "chatCreateTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: "群的创建时间"
+            - name: "memberType"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "成员类型 1-企业成员 2-外部联系人"
+            - name: "memberJoinTime"
+              type: "Date"
+              required: false
+              constraints: []
+              description: "入群时间"
+            - name: "memberJoinScene"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "入群方式 1-直接邀请 2-链接入群 3-扫码入群"
+            - name: "memberInvitorUserid"
+              type: "String"
+              required: false
+              constraints: []
+              description: "邀请者userid"
+            - name: "memberGroupNickname"
+              type: "String"
+              required: false
+              constraints: []
+              description: "群昵称"
+            - name: "memberName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "展示名称 (微信昵称)"
+            - name: "adminList"
+              type: "String"
+              required: false
+              constraints: []
+              description: "群管理员列表"
+            - name: "memberVersion"
+              type: "String"
+              required: false
+              constraints: []
+              description: "群成员版本号"
+            - name: "locked"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "状态 0-正常 1-已删除"
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getAllInformation"
+      signature: "getAllInformation(FindInformationParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.delRepeatOpenId"
+    summary: "删除重复的openId"
+    description: "执行Del并返回Object"
+    intentAliases:
+      - "删除重复的openId"
+      - "delRepeatOpenId"
+      - "Object"
+      - "del"
+      - "Repeat"
+      - "Open"
+      - "Id"
+    tags:
+      - "aiAgent"
+      - "delRepeatOpenId"
+      - "del"
+      - "Object"
+    httpMethod: "POST"
+    path: "/del"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: null
+        required: false
+        description: null
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Del执行结果"
+    dtoSchemas:
+      requestTypes:
+        []
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "delRepeatOpenId"
+      signature: "delRepeatOpenId()"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getOfficialAccountAdmins"
+    summary: "同步某个公众号端所有用户的openID + union ID"
+    description: "查询Getofficialaccountadmins详情并返回Object"
+    intentAliases:
+      - "同步某个公众号端所有用户的openID + union ID"
+      - "getOfficialAccountAdmins"
+      - "Object"
+      - "appId"
+      - "get"
+      - "Official"
+      - "Account"
+      - "Admins"
+    tags:
+      - "aiAgent"
+      - "getOfficialAccountAdmins"
+      - "Object"
+    httpMethod: "GET"
+    path: "/getOfficialAccountAdmins"
+    request:
+      headers: []
+      pathParams: []
+      queryParams:
+        - name: "appId"
+          type: "String"
+          required: true
+          description: "appId"
+      parts: []
+      body:
+        type: null
+        required: false
+        description: null
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Getofficialaccountadmins详情"
+    dtoSchemas:
+      requestTypes:
+        []
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+        appId: "value"
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getOfficialAccountAdmins"
+      signature: "getOfficialAccountAdmins(String appId)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getWeComAdminInformation"
+    summary: "记录企业微信端用户的External_userID + Union ID"
+    description: "执行Getwecomadmininformation并返回Object"
+    intentAliases:
+      - "记录企业微信端用户的External_userID + Union ID"
+      - "getWeComAdminInformation"
+      - "Object"
+      - "WeComInformationParam"
+      - "get"
+      - "We"
+      - "Com"
+      - "Admin"
+      - "Information"
+    tags:
+      - "aiAgent"
+      - "getWeComAdminInformation"
+      - "WeComInformationParam"
+      - "Object"
+    httpMethod: "POST"
+    path: "/getWeComAdminInformation"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "WeComInformationParam"
+        required: true
+        description: "getWeComAdminInformation 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Getwecomadmininformation执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "WeComInformationParam"
+          fields:
+            - name: "corpName"
+              type: "String"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "企微绑定的应用名称"
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getWeComAdminInformation"
+      signature: "getWeComAdminInformation(WeComInformationParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getUnassignedList"
+    summary: "获取因内部成员离职待分配的外部客户信息"
+    description: "执行Getunassignedlist并返回HandoverToBeAllocated"
+    intentAliases:
+      - "获取因内部成员离职待分配的外部客户信息"
+      - "getUnassignedList"
+      - "HandoverToBeAllocatedDTO"
+      - "WeComInformationParam"
+      - "get"
+      - "Unassigned"
+      - "List"
+    tags:
+      - "aiAgent"
+      - "getUnassignedList"
+      - "WeComInformationParam"
+      - "HandoverToBeAllocatedDTO"
+    httpMethod: "POST"
+    path: "/getUnassignedList"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "WeComInformationParam"
+        required: true
+        description: "getUnassignedList 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "HandoverToBeAllocatedDTO"
+      description: "Getunassignedlist执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "WeComInformationParam"
+          fields:
+            - name: "corpName"
+              type: "String"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "企微绑定的应用名称"
+      responseTypes:
+        - name: "HandoverToBeAllocatedDTO"
+          fields:
+            - name: "handoverUserIdCnt"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: "@Author: 罗豪@CreateTime: 2025-04-18@Description: 内部成员离职、外部客户待分配信息"
+            - name: "externalUserIdCnt"
+              type: "Integer"
+              required: false
+              constraints: []
+              description: ""
+            - name: "handoverUserIds"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: ""
+            - name: "externalUserIds"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: ""
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getUnassignedList"
+      signature: "getUnassignedList(WeComInformationParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getContact"
+    summary: "根据用户id 查询尘锋关联信息"
+    description: "执行Getbyuserid并返回DustEdgeRelation"
+    intentAliases:
+      - "根据用户id 查询尘锋关联信息"
+      - "getContact"
+      - "List<DustEdgeRelationVO>"
+      - "DustEdgeRelationQuery"
+      - "getByUserId"
+      - "get"
+      - "Contact"
+    tags:
+      - "aiAgent"
+      - "getContact"
+      - "getByUserId"
+      - "DustEdgeRelationQuery"
+      - "DustEdgeRelationVO"
+    httpMethod: "POST"
+    path: "/getByUserId"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "DustEdgeRelationQuery"
+        required: true
+        description: "getContact 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "List<DustEdgeRelationVO>"
+      description: "Getbyuserid执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "DustEdgeRelationQuery"
+          fields:
+            - name: "userIds"
+              type: "List<String>"
+              required: true
+              constraints: ["@NotNull"]
+              description: "车上云用户 ID"
+      responseTypes:
+        - name: "DustEdgeRelationVO"
+          fields:
+            - name: "userId"
+              type: "Long"
+              required: false
+              constraints: []
+              description: "用户 id"
+            - name: "customerId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "尘锋 customer_id"
+            - name: "unionId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "外部联系人在微信开放平台的唯一身份标识"
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getContact"
+      signature: "getContact(DustEdgeRelationQuery query)"
+    sourceMeta:
+      owner: "hongweisheng"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getFollowUserId"
+    summary: "从给定的跟进人列表中，返回添加外部联系人最少的跟进人 user_id"
+    description: "执行Getfollowuserid并返回MinFollowUserId"
+    intentAliases:
+      - "从给定的跟进人列表中，返回添加外部联系人最少的跟进人 user_id"
+      - "getFollowUserId"
+      - "MinFollowUserIdDTO"
+      - "FollowUserIdsParam"
+      - "get"
+      - "Follow"
+      - "User"
+      - "Id"
+    tags:
+      - "aiAgent"
+      - "getFollowUserId"
+      - "FollowUserIdsParam"
+      - "MinFollowUserIdDTO"
+    httpMethod: "POST"
+    path: "/getFollowUserId"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "FollowUserIdsParam"
+        required: true
+        description: "getFollowUserId 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "MinFollowUserIdDTO"
+      description: "Getfollowuserid执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "FollowUserIdsParam"
+          fields:
+            - name: "followUserIds"
+              type: "List<String>"
+              required: true
+              constraints: ["@NotEmpty"]
+              description: "跟进人 userid列表"
+            - name: "corpName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "企业微信企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业"
+      responseTypes:
+        - name: "MinFollowUserIdDTO"
+          fields:
+            - name: "followUserId"
+              type: "String"
+              required: false
+              constraints: []
+              description: "跟进人user_id"
+            - name: "qrCodeUrl"
+              type: "String"
+              required: false
+              constraints: []
+              description: "企业微信「联系我」二维码链接客户扫描此二维码可添加该跟进人"
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getFollowUserId"
+      signature: "getFollowUserId(FollowUserIdsParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.markTag"
+    summary: "为外部联系人（客户）打标签"
+    description: "执行Marktag并返回Object"
+    intentAliases:
+      - "为外部联系人（客户）打标签"
+      - "markTag"
+      - "Object"
+      - "MarkTagParam"
+      - "mark"
+      - "Tag"
+    tags:
+      - "aiAgent"
+      - "markTag"
+      - "MarkTagParam"
+      - "Object"
+    httpMethod: "POST"
+    path: "/markTag"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "MarkTagParam"
+        required: true
+        description: "markTag 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Marktag执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "MarkTagParam"
+          fields:
+            - name: "corpName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业"
+            - name: "userid"
+              type: "String"
+              required: true
+              constraints: ["@NotBlank"]
+              description: "添加外部联系人的企业成员userid必填"
+            - name: "external_userid"
+              type: "String"
+              required: true
+              constraints: ["@NotBlank"]
+              description: "外部联系人userid必填"
+            - name: "add_tag"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: "要添加的标签ID列表add_tag和remove_tag不可同时为空"
+            - name: "remove_tag"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: "要移除的标签ID列表add_tag和remove_tag不可同时为空"
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "markTag"
+      signature: "markTag(MarkTagParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"
+  - operationId: "user.innerapi.aiAgent.getCorpTagList"
+    summary: "获取企业标签库列表"
+    description: "执行Getcorptaglist并返回Object"
+    intentAliases:
+      - "获取企业标签库列表"
+      - "getCorpTagList"
+      - "Object"
+      - "GetCorpTagListParam"
+      - "get"
+      - "Corp"
+      - "Tag"
+      - "List"
+    tags:
+      - "aiAgent"
+      - "getCorpTagList"
+      - "GetCorpTagListParam"
+      - "Object"
+    httpMethod: "POST"
+    path: "/getCorpTagList"
+    request:
+      headers: []
+      pathParams: []
+      queryParams: []
+      parts: []
+      body:
+        type: "GetCorpTagListParam"
+        required: true
+        description: "getCorpTagList 请求体"
+    response:
+      envelopeType: "com.dst.steed.common.domain.response.Response"
+      dataType: "Object"
+      description: "Getcorptaglist执行结果"
+    dtoSchemas:
+      requestTypes:
+        - name: "GetCorpTagListParam"
+          fields:
+            - name: "corpName"
+              type: "String"
+              required: false
+              constraints: []
+              description: "企业名称（可选）用于获取对应企业的access_token如果不传，则使用配置中的第一个企业"
+            - name: "tag_id"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: "标签组ID列表不传则获取全部标签组"
+            - name: "group_id"
+              type: "List<String>"
+              required: false
+              constraints: []
+              description: "标签组ID列表不传则获取全部标签组"
+      responseTypes:
+        []
+    errors: []
+    examples:
+      requestBody:
+      successResponse:
+        code: "000000"
+        msg: "success"
+        data: []
+      errorResponses: []
+    sourceCodeMethod:
+      className: "WechatPlatformInformationController"
+      methodName: "getCorpTagList"
+      signature: "getCorpTagList(GetCorpTagListParam param)"
+    sourceMeta:
+      owner: "luohao"
+      ownerSource: "git-blame-mapping"

@@ -1,5 +1,5 @@
 ---
-domain: "user-center"
+domain: "user"
 service: "dst-user-core-service"
 
 owner:
@@ -37,7 +37,7 @@ troubleshootingNotes:
 
 ## 基本信息
 
-- 域：`user-center`
+- 域：`user`
 - 服务名：`dst-user-core-service`
 - 状态：`active`
 - 项目 owner：`洪伟盛`
