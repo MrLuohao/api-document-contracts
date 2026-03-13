@@ -3,21 +3,28 @@
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.modifyJobNumber",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "get": [
-    "user-center.innerapi.aiAgent.getAdminInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
   ],
   "at": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "eta": [
     "user-center.innerapi.aiAgent.getAdminInformation"
   ],
   "di": [
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.modifyJobNumber"
+    "user-center.innerapi.aiAgent.modifyJobNumber",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "id修": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
@@ -26,6 +33,10 @@
     "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "lo": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "ech": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

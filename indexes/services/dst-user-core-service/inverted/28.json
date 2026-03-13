@@ -1,5 +1,13 @@
 {
   "取个人": [
     "user-center.innerapi.aiAgent.getAdminInformation"
+  ],
+  "pr": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "录企业": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

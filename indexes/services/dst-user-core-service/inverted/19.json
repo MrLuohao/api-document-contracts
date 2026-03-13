@@ -1,11 +1,15 @@
 {
   "户信": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "一入": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "ad": [
     "user-center.innerapi.aiAgent.getAdminInformation",
@@ -14,12 +18,17 @@
   ],
   "io": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "ya": [
     "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
   "nc": [
     "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "记录企": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

@@ -7,20 +7,28 @@
   ],
   "统一入口": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "查看": [
-    "user-center.innerapi.aiAgent.getAdminInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
   ],
   "tio": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "并返回": [
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.modifyJobNumber",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "户工": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
@@ -29,9 +37,19 @@
     "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "变更日": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "处理l": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "te": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "修改企业用户信息": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ]
 }

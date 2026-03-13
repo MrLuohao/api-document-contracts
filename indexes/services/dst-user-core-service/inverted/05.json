@@ -9,7 +9,10 @@
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.modifyJobNumber",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "job": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
@@ -25,5 +28,13 @@
   ],
   "bnu": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "ri": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "oge": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

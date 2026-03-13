@@ -11,21 +11,36 @@
   ],
   "一入口": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "d修": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "ch": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "gad": [
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "o并返": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "处理logadminchangeinfo并返回结果": [
     "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ris": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "改企": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "yen": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ]
 }

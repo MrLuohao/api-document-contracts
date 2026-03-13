@@ -3,29 +3,58 @@
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.modifyJobNumber",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "inf": [
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "nfo": [
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "param": [
     "user-center.innerapi.aiAgent.getAdminInformation",
     "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.modifyJobNumber",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "处理m": [
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.modifyJobNumber"
+    "user-center.innerapi.aiAgent.modifyJobNumber",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "用户i": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "取企业": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "获取企业用户信息": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "ter": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "rpr": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

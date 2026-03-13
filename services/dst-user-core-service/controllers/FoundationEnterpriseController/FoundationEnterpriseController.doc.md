@@ -10,7 +10,7 @@
 
 - `user-center.innerapi.aiAgent.getEnterpriseInformation` 获取企业用户信息(统一入口)
 - `user-center.innerapi.aiAgent.modifyEnterpriseInformation` 修改企业用户信息(统一入口)
-- `user-center.innerapi.aiAgent.logMessage` 记录企业名称变更日志
+- `user-center.innerapi.aiAgent.foundationEnterprise.logMessage` 记录企业名称变更日志
 
 ## 1. 获取企业用户信息(统一入口)
 
@@ -140,7 +140,7 @@
 
 ### 基本信息
 
-- operationId: `user-center.innerapi.aiAgent.logMessage`
+- operationId: `user-center.innerapi.aiAgent.foundationEnterprise.logMessage`
 - method: `POST`
 - path: `/foundation/enterprise/logEnterpriseChangeInfo`
 - description: 处理Logenterprisechangeinfo并返回结果

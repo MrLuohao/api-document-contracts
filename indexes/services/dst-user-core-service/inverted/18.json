@@ -1,25 +1,33 @@
 {
   "入口": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "查询": [
-    "user-center.innerapi.aiAgent.getAdminInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
   ],
   "on": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "query": [
-    "user-center.innerapi.aiAgent.getAdminInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
   ],
   "理mo": [
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.modifyJobNumber"
+    "user-center.innerapi.aiAgent.modifyJobNumber",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "ify": [
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.modifyJobNumber"
+    "user-center.innerapi.aiAgent.modifyJobNumber",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "fya": [
     "user-center.innerapi.aiAgent.modifyAdminInformation"
@@ -28,6 +36,13 @@
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "ng": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "业名": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "sec": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

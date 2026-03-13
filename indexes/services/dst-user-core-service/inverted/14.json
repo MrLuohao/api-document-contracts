@@ -1,7 +1,8 @@
 {
   "if": [
     "user-center.innerapi.aiAgent.modifyAdminInformation",
-    "user-center.innerapi.aiAgent.modifyJobNumber"
+    "user-center.innerapi.aiAgent.modifyJobNumber",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "户i": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
@@ -10,9 +11,18 @@
     "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "log": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "人名": [
     "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "is": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "录企": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

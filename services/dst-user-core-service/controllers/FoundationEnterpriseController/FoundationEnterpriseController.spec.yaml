@@ -302,7 +302,7 @@ methods:
     methodName: modifyEnterpriseInformation
     signature: modifyEnterpriseInformation(ModifyEnterpriseParam param)
 - identity:
-    operationId: user-center.innerapi.aiAgent.logMessage
+    operationId: user-center.innerapi.aiAgent.foundationEnterprise.logMessage
   semantic:
     summary: 记录企业名称变更日志
     description: 处理Logenterprisechangeinfo并返回结果

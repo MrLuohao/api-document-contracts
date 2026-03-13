@@ -1,7 +1,9 @@
 {
   "统一": [
     "user-center.innerapi.aiAgent.getAdminInformation",
-    "user-center.innerapi.aiAgent.modifyAdminInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ],
   "er并": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
@@ -10,6 +12,13 @@
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "称变更": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
+  ],
+  "ye": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "处理logenterprisechangeinfo并返回结果": [
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ]
 }

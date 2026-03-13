@@ -8,15 +8,19 @@
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "list": [
-    "user-center.innerapi.aiAgent.getAdminInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
   ],
   "vo": [
-    "user-center.innerapi.aiAgent.getAdminInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
   ],
   "object": [
     "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.modifyJobNumber",
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "id": [
     "user-center.innerapi.aiAgent.modifyJobNumber"
@@ -31,9 +35,13 @@
     "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "o并": [
-    "user-center.innerapi.aiAgent.logMessage"
+    "user-center.innerapi.aiAgent.logMessage",
+    "user-center.innerapi.aiAgent.foundationEnterprise.logMessage"
   ],
   "oga": [
     "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "改企业": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
   ]
 }
