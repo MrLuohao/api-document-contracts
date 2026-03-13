@@ -1,6 +1,6 @@
 {
   "ion": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ]
 }

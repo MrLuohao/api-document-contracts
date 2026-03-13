@@ -1,16 +1,26 @@
 {
   "统一入": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
   "n并": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
+  ],
+  "adm": [
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "改个": [
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "od": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
-  "处理modifyenterpriseinformation并返回结果": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  "yj": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ]
 }

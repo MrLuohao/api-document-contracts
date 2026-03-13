@@ -1,16 +1,18 @@
 {
-  "is": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
-    "user-center.innerapi.aiAgent.logMessage"
-  ],
   "if": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "户i": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "r并返": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "log": [
     "user-center.innerapi.aiAgent.logMessage"
   ],
-  "录企": [
+  "人名": [
     "user-center.innerapi.aiAgent.logMessage"
   ]
 }

@@ -1,16 +1,22 @@
 {
-  "获取企": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation"
-  ],
-  "se": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
-    "user-center.innerapi.aiAgent.logMessage"
-  ],
   "modify": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "理m": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "yad": [
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
+  ],
+  "jo": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "um": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "录个": [
+    "user-center.innerapi.aiAgent.logMessage"
   ]
 }

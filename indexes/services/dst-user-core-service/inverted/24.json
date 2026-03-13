@@ -1,10 +1,22 @@
 {
+  "人用": [
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
   "n并返": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
   "编辑": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "处理modifyadmininformation并返回结果": [
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
+  ],
+  "mb": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "理lo": [
     "user-center.innerapi.aiAgent.logMessage"

@@ -1,19 +1,12 @@
 {
   "返回": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber",
     "user-center.innerapi.aiAgent.logMessage"
   ],
-  "ete": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation"
-  ],
-  "erp": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
-    "user-center.innerapi.aiAgent.logMessage"
-  ],
-  "记录企业名称变更日志": [
-    "user-center.innerapi.aiAgent.logMessage"
+  "yjo": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "han": [
     "user-center.innerapi.aiAgent.logMessage"

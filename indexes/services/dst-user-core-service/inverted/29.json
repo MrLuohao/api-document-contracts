@@ -1,15 +1,23 @@
 {
   "理g": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation"
+  ],
+  "ini": [
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
   "mat": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
   "更新": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "message": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "录个人": [
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "nge": [

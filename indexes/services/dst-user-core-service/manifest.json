@@ -3,7 +3,7 @@
   "version": 1,
   "updatedAt": "2026-03-13",
   "controllerCount": 1,
-  "operationCount": 3,
+  "operationCount": 4,
   "operationsFile": "operations.jsonl",
   "invertedDir": "inverted"
 }

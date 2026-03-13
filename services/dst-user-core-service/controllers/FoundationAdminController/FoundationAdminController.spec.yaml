@@ -1,0 +1,372 @@
+domain: user-center
+service: dst-user-core-service
+controller:
+  name: FoundationAdminController
+  basePath: /foundation/admin
+  source:
+    repo: /Users/luohao/Desktop/DST/user-center/dst-user-core-service
+    file: src/main/java/com/dst/user/core/modules/business/foundation/controller/FoundationAdminController.java
+methods:
+- identity:
+    operationId: user-center.innerapi.aiAgent.getAdminInformation
+  semantic:
+    summary: 获取个人用户信息(统一入口)
+    description: 处理Getadmininformation并返回结果
+  search:
+    intentAliases:
+    - 获取个人用户信息(统一入口)
+    - getAdminInformation
+    - List<AdminInformationVO>
+    - QueryAdminParam
+    - get
+    - Admin
+    - Information
+    tags:
+    - getAdminInformation
+    - QueryAdminParam
+    - AdminInformationVO
+  protocol:
+    httpMethod: REQUEST
+    path: /getAdminInformation
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: QueryAdminParam
+      required: true
+      description: getAdminInformation 请求体
+  response:
+    envelopeType: Response
+    dataType: List<AdminInformationVO>
+    description: Getadmininformation返回结果
+  schemas:
+    requestTypes:
+    - name: QueryAdminParam
+      fields:
+      - name: adminIds
+        type: List<String>
+        required: false
+        description: 个人用户id集合
+        constraints: []
+    responseTypes:
+    - name: AdminInformationVO
+      fields:
+      - name: id
+        type: String
+        required: false
+        description: 个人用户id
+        constraints: []
+      - name: regChannel
+        type: Integer
+        required: false
+        description: '注册渠道: 1.地上铁App 2.H5'
+        constraints: []
+      - name: phone
+        type: String
+        required: false
+        description: 手机号
+        constraints: []
+      - name: phoneMask
+        type: String
+        required: false
+        description: ''
+        constraints: []
+      - name: realname
+        type: String
+        required: false
+        description: 姓名
+        constraints: []
+      - name: urlFront
+        type: String
+        required: false
+        description: 身份证正面
+        constraints: []
+      - name: urlBack
+        type: String
+        required: false
+        description: 身份证反面
+        constraints: []
+      - name: cardId
+        type: String
+        required: false
+        description: 身份证号
+        constraints: []
+      - name: reviewsStatus
+        type: Integer
+        required: false
+        description: '认证状态: 1 认证中 2 已驳回 3 已认证 4未认证 5已过期'
+        constraints: []
+      - name: modifierId
+        type: Long
+        required: false
+        description: 修改人id
+        constraints: []
+      - name: modifierName
+        type: String
+        required: false
+        description: 修改人名称
+        constraints: []
+  errors: []
+  source:
+    className: FoundationAdminController
+    methodName: getAdminInformation
+    signature: getAdminInformation(QueryAdminParam param)
+- identity:
+    operationId: user-center.innerapi.aiAgent.modifyAdminInformation
+  semantic:
+    summary: 修改个人用户信息(统一入口)
+    description: 处理Modifyadmininformation并返回结果
+  search:
+    intentAliases:
+    - 修改个人用户信息(统一入口)
+    - modifyAdminInformation
+    - Object
+    - ModifyAdminParam
+    - modify
+    - Admin
+    - Information
+    tags:
+    - modifyAdminInformation
+    - ModifyAdminParam
+    - Object
+  protocol:
+    httpMethod: REQUEST
+    path: /modifyAdminInformation
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: ModifyAdminParam
+      required: true
+      description: modifyAdminInformation 请求体
+  response:
+    envelopeType: Response
+    dataType: Object
+    description: Modifyadmininformation返回结果
+  schemas:
+    requestTypes:
+    - name: ModifyAdminParam
+      fields:
+      - name: adminId
+        type: String
+        required: true
+        description: 用户ID
+        constraints:
+        - '@NotEmpty'
+      - name: realName
+        type: String
+        required: false
+        description: 用户姓名
+        constraints: []
+      - name: urlFront
+        type: String
+        required: false
+        description: 身份证正面照片URL
+        constraints: []
+      - name: urlBack
+        type: String
+        required: false
+        description: 身份证反面照片URL
+        constraints: []
+      - name: cardId
+        type: String
+        required: false
+        description: 身份证号
+        constraints: []
+      - name: channel
+        type: String
+        required: true
+        description: 接口调用方
+        constraints:
+        - '@NotEmpty'
+      - name: modifierId
+        type: Long
+        required: false
+        description: 修改人id
+        constraints: []
+      - name: modifierName
+        type: String
+        required: false
+        description: 修改人名称
+        constraints: []
+      - name: modifyTime
+        type: Date
+        required: false
+        description: 修改时间
+        constraints: []
+      - name: jobNumber
+        type: String
+        required: false
+        description: 用户工号
+        constraints: []
+    responseTypes: []
+  errors: []
+  source:
+    className: FoundationAdminController
+    methodName: modifyAdminInformation
+    signature: modifyAdminInformation(ModifyAdminParam param)
+- identity:
+    operationId: user-center.innerapi.aiAgent.modifyJobNumber
+  semantic:
+    summary: 根据用户ID修改个人用户工号
+    description: 处理Modifyjobnumber并返回结果
+  search:
+    intentAliases:
+    - 根据用户ID修改个人用户工号
+    - modifyJobNumber
+    - Object
+    - ModifyAdminParam
+    - modify
+    - Job
+    - Number
+    tags:
+    - modifyJobNumber
+    - ModifyAdminParam
+    - Object
+  protocol:
+    httpMethod: REQUEST
+    path: /modifyJobNumber
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: ModifyAdminParam
+      required: true
+      description: modifyJobNumber 请求体
+  response:
+    envelopeType: Response
+    dataType: Object
+    description: Modifyjobnumber返回结果
+  schemas:
+    requestTypes:
+    - name: ModifyAdminParam
+      fields:
+      - name: adminId
+        type: String
+        required: true
+        description: 用户ID
+        constraints:
+        - '@NotEmpty'
+      - name: realName
+        type: String
+        required: false
+        description: 用户姓名
+        constraints: []
+      - name: urlFront
+        type: String
+        required: false
+        description: 身份证正面照片URL
+        constraints: []
+      - name: urlBack
+        type: String
+        required: false
+        description: 身份证反面照片URL
+        constraints: []
+      - name: cardId
+        type: String
+        required: false
+        description: 身份证号
+        constraints: []
+      - name: channel
+        type: String
+        required: true
+        description: 接口调用方
+        constraints:
+        - '@NotEmpty'
+      - name: modifierId
+        type: Long
+        required: false
+        description: 修改人id
+        constraints: []
+      - name: modifierName
+        type: String
+        required: false
+        description: 修改人名称
+        constraints: []
+      - name: modifyTime
+        type: Date
+        required: false
+        description: 修改时间
+        constraints: []
+      - name: jobNumber
+        type: String
+        required: false
+        description: 用户工号
+        constraints: []
+    responseTypes: []
+  errors: []
+  source:
+    className: FoundationAdminController
+    methodName: modifyJobNumber
+    signature: modifyJobNumber(ModifyAdminParam param)
+- identity:
+    operationId: user-center.innerapi.aiAgent.logMessage
+  semantic:
+    summary: 记录个人名称变更日志
+    description: 处理Logadminchangeinfo并返回结果
+  search:
+    intentAliases:
+    - 记录个人名称变更日志
+    - logMessage
+    - Object
+    - AdminLogParam
+    - logAdminChangeInfo
+    - log
+    - Message
+    tags:
+    - logMessage
+    - logAdminChangeInfo
+    - AdminLogParam
+    - Object
+  protocol:
+    httpMethod: POST
+    path: /logAdminChangeInfo
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: AdminLogParam
+      required: true
+      description: logMessage 请求体
+  response:
+    envelopeType: Response
+    dataType: Object
+    description: Logadminchangeinfo返回结果
+  schemas:
+    requestTypes:
+    - name: AdminLogParam
+      fields:
+      - name: oldAdmin
+        type: Admin
+        required: false
+        description: 个人用户旧信息
+        constraints: []
+      - name: newAdmin
+        type: Admin
+        required: false
+        description: 个人用户新信息
+        constraints: []
+      - name: channel
+        type: String
+        required: false
+        description: 渠道
+        constraints: []
+      - name: unifyLogEvent
+        type: String
+        required: false
+        description: 统一日志事件
+        constraints: []
+    responseTypes: []
+  errors: []
+  source:
+    className: FoundationAdminController
+    methodName: logMessage
+    signature: logMessage(AdminLogParam param)

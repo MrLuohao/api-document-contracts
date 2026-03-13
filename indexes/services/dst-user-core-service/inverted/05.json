@@ -1,15 +1,29 @@
 {
-  "ri": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+  "个人": [
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber",
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "回结": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber",
     "user-center.innerapi.aiAgent.logMessage"
   ],
-  "oge": [
-    "user-center.innerapi.aiAgent.logMessage"
+  "job": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "根据用": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "ob": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "be": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "bnu": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ]
 }

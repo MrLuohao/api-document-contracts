@@ -1,15 +1,15 @@
 {
   "统一": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
-  "ye": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  "er并": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
-  "称变更": [
+  "记录个": [
     "user-center.innerapi.aiAgent.logMessage"
   ],
-  "处理logenterprisechangeinfo并返回结果": [
+  "称变更": [
     "user-center.innerapi.aiAgent.logMessage"
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "业用户": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  "ni": [
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
   ],
-  "ent": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+  "min": [
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
     "user-center.innerapi.aiAgent.logMessage"
   ],
-  "gen": [
-    "user-center.innerapi.aiAgent.logMessage"
+  "r并": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "fo并": [
     "user-center.innerapi.aiAgent.logMessage"

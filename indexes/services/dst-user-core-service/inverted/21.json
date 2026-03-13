@@ -1,23 +1,31 @@
 {
   "innerapi": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber",
     "user-center.innerapi.aiAgent.logMessage"
   ],
   "get": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation"
   ],
   "at": [
-    "user-center.innerapi.aiAgent.getEnterpriseInformation",
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.getAdminInformation",
+    "user-center.innerapi.aiAgent.modifyAdminInformation"
+  ],
+  "eta": [
+    "user-center.innerapi.aiAgent.getAdminInformation"
   ],
   "di": [
-    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+    "user-center.innerapi.aiAgent.modifyAdminInformation",
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "id修": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
+  ],
+  "mbe": [
+    "user-center.innerapi.aiAgent.modifyJobNumber"
   ],
   "lo": [
-    "user-center.innerapi.aiAgent.logMessage"
-  ],
-  "ech": [
     "user-center.innerapi.aiAgent.logMessage"
   ]
 }
