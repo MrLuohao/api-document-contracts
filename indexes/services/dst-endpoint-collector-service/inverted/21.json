@@ -1,0 +1,8 @@
+{
+  "innerapi": [
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "跳默": [
+    "analytics.innerapi.aiAgent.ping"
+  ]
+}

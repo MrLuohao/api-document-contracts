@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "identity": {
+        "service": "dst-endpoint-collector-service",
+        "domain": "analytics"
+      },
+      "owner": {
+        "name": "luohao"
+      },
+      "shard": {
+        "shardPath": "indexes/services/dst-endpoint-collector-service/"
+      },
+      "capability": {
+        "capabilityTerms": [
+          "系统",
+          "统心",
+          "心跳",
+          "跳默",
+          "默认",
+          "认接",
+          "接口",
+          "系统心",
+          "统心跳",
+          "心跳默",
+          "跳默认",
+          "默认接"
+        ]
+      }
+    }
+  ]
+}

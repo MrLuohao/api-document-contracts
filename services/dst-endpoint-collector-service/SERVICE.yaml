@@ -1,0 +1,15 @@
+identity:
+  domain: analytics
+  service: dst-endpoint-collector-service
+owner:
+  name: luohao
+source:
+  repo: /Users/luohao/Desktop/DST/client-tracking/dst-endpoint-collector-service
+target:
+  type: service-name
+  value: dst-endpoint-collector-service
+  contextIdPrefix: ''
+pathRules:
+  pathPrefix: ''
+  basePathStyle: controller-base-plus-method-path
+  exceptions: []

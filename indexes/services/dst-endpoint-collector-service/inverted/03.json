@@ -1,0 +1,8 @@
+{
+  "agent": [
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "统心跳": [
+    "analytics.innerapi.aiAgent.ping"
+  ]
+}

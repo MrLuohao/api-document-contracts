@@ -1,0 +1,8 @@
+{
+  "analytics": [
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "pin": [
+    "analytics.innerapi.aiAgent.ping"
+  ]
+}

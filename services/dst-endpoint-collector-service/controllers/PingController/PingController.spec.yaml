@@ -1,0 +1,46 @@
+domain: analytics
+service: dst-endpoint-collector-service
+controller:
+  name: PingController
+  basePath: ''
+  source:
+    repo: /Users/luohao/Desktop/DST/client-tracking/dst-endpoint-collector-service
+    file: src/main/java/com/dst/analytics/modules/ping/controller/PingController.java
+methods:
+- identity:
+    operationId: analytics.innerapi.aiAgent.ping
+  semantic:
+    summary: 系统心跳默认接口
+    description: 处理Ping并返回结果
+  search:
+    intentAliases:
+    - 系统心跳默认接口
+    - ping
+    - String
+    tags:
+    - ping
+    - String
+  protocol:
+    httpMethod: GET
+    path: /ping
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: null
+      required: false
+      description: null
+  response:
+    envelopeType: Response
+    dataType: String
+    description: Ping返回结果
+  schemas:
+    requestTypes: []
+    responseTypes: []
+  errors: []
+  source:
+    className: PingController
+    methodName: ping
+    signature: ping()

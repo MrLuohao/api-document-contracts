@@ -1,0 +1,11 @@
+{
+  "接口": [
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "系统心跳默认接口": [
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "并返": [
+    "analytics.innerapi.aiAgent.ping"
+  ]
+}

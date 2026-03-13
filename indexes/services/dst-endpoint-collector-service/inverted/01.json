@@ -1,0 +1,8 @@
+{
+  "默认": [
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "处理ping并返回结果": [
+    "analytics.innerapi.aiAgent.ping"
+  ]
+}
