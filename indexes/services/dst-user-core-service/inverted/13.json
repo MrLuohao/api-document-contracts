@@ -1,0 +1,28 @@
+{
+  "获取": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "rm": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "pri": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "回结果": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "企业名": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "更日志": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ha": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

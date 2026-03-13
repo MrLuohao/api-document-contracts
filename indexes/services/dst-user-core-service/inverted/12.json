@@ -1,0 +1,16 @@
+{
+  "统一入": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "n并": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "od": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "处理modifyenterpriseinformation并返回结果": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ]
+}

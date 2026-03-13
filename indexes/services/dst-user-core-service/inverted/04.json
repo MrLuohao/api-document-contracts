@@ -1,0 +1,19 @@
+{
+  "取企": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "信息": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "用户信": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "change": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "业名称": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

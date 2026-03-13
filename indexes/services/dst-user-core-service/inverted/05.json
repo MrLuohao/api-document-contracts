@@ -1,0 +1,15 @@
+{
+  "ri": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "回结": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "oge": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

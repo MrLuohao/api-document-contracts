@@ -1,0 +1,32 @@
+{
+  "统一入口": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "查看": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "te": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "tio": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "并返回": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "修改企业用户信息": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "变更日": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "处理l": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

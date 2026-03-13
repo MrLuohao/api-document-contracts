@@ -1,0 +1,33 @@
+{
+  "user": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "企业": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "结果": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "orm": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "dif": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "info": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "变更": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "og": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

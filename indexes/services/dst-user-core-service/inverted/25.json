@@ -1,0 +1,23 @@
+{
+  "一入口": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "ris": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "改企": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "yen": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "ch": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "o并返": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

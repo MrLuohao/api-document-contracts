@@ -1,0 +1,15 @@
+identity:
+  domain: user-center
+  service: dst-user-core-service
+owner:
+  name: 洪伟盛
+source:
+  repo: /Users/luohao/Desktop/DST/user-center/dst-user-core-service
+target:
+  type: service-name
+  value: dst-user-core-service
+  contextIdPrefix: ''
+pathRules:
+  pathPrefix: ''
+  basePathStyle: controller-base-plus-method-path
+  exceptions: []

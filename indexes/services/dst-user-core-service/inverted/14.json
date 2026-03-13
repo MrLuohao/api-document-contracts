@@ -1,0 +1,16 @@
+{
+  "is": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "if": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "log": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "录企": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

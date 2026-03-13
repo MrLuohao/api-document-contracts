@@ -1,0 +1,23 @@
+{
+  "innerapi": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "get": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "at": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "di": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "lo": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ech": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

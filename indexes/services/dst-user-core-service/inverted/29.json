@@ -1,0 +1,18 @@
+{
+  "理g": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "mat": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "更新": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "message": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "nge": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "企业用": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "ge": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "处理getenterpriseinformation并返回结果": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "fy": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "fye": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "理l": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ec": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

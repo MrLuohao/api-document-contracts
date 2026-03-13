@@ -1,0 +1,37 @@
+{
+  "理ge": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "nte": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "on并": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "返回结": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "修改企": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "odi": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "日志": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "an": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ang": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "gei": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

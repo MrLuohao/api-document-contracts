@@ -1,0 +1,17 @@
+{
+  "业用户": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "ent": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "gen": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "fo并": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

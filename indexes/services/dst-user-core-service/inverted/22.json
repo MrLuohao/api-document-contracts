@@ -1,0 +1,21 @@
+{
+  "返回": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ete": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "erp": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "记录企业名称变更日志": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "han": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

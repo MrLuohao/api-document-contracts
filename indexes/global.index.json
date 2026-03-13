@@ -27,6 +27,34 @@
           "上报接"
         ]
       }
+    },
+    {
+      "identity": {
+        "service": "dst-user-core-service",
+        "domain": "user-center"
+      },
+      "owner": {
+        "name": "洪伟盛"
+      },
+      "shard": {
+        "shardPath": "indexes/services/dst-user-core-service/"
+      },
+      "capability": {
+        "capabilityTerms": [
+          "获取",
+          "取企",
+          "企业",
+          "业用",
+          "用户",
+          "户信",
+          "信息",
+          "获取企",
+          "取企业",
+          "企业用",
+          "业用户",
+          "用户信"
+        ]
+      }
     }
   ]
 }

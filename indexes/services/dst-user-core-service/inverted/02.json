@@ -1,0 +1,9 @@
+{
+  "rma": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "cha": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

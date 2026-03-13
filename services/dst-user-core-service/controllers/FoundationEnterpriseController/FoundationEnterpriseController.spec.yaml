@@ -1,0 +1,368 @@
+domain: user-center
+service: dst-user-core-service
+controller:
+  name: FoundationEnterpriseController
+  basePath: /foundation/enterprise
+  source:
+    repo: /Users/luohao/Desktop/DST/user-center/dst-user-core-service
+    file: src/main/java/com/dst/user/core/modules/business/foundation/controller/FoundationEnterpriseController.java
+methods:
+- identity:
+    operationId: user-center.innerapi.aiAgent.getEnterpriseInformation
+  semantic:
+    summary: 获取企业用户信息(统一入口)
+    description: 处理Getenterpriseinformation并返回结果
+  search:
+    intentAliases:
+    - 获取企业用户信息(统一入口)
+    - getEnterpriseInformation
+    - List<EnterpriseInformationVO>
+    - QueryEnterpriseParam
+    - get
+    - Enterprise
+    - Information
+    tags:
+    - getEnterpriseInformation
+    - QueryEnterpriseParam
+    - EnterpriseInformationVO
+  protocol:
+    httpMethod: REQUEST
+    path: /getEnterpriseInformation
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: QueryEnterpriseParam
+      required: true
+      description: getEnterpriseInformation 请求体
+  response:
+    envelopeType: Response
+    dataType: List<EnterpriseInformationVO>
+    description: Getenterpriseinformation返回结果
+  schemas:
+    requestTypes:
+    - name: QueryEnterpriseParam
+      fields:
+      - name: enterpriseIds
+        type: List<String>
+        required: false
+        description: 企业用户id集合
+        constraints: []
+    responseTypes:
+    - name: EnterpriseInformationVO
+      fields:
+      - name: id
+        type: String
+        required: false
+        description: 企业用户id
+        constraints: []
+      - name: dataChannel
+        type: String
+        required: false
+        description: 数据渠道
+        constraints: []
+      - name: businessStatus
+        type: String
+        required: false
+        description: 企业用户状态 （存续、吊销）
+        constraints: []
+      - name: enterpriseCreditCode
+        type: String
+        required: false
+        description: 企业信用代码
+        constraints: []
+      - name: enterpriseName
+        type: String
+        required: false
+        description: 企业名称
+        constraints: []
+      - name: enterpriseLegalName
+        type: String
+        required: false
+        description: 法人姓名
+        constraints: []
+      - name: enterpriseRegister
+        type: String
+        required: false
+        description: 注册资本
+        constraints: []
+      - name: enterpriseModel
+        type: String
+        required: false
+        description: 工商类型
+        constraints: []
+      - name: enterpriseResidence
+        type: String
+        required: false
+        description: 住所
+        constraints: []
+      - name: enterpriseRegisterDate
+        type: Date
+        required: false
+        description: 成立日期
+        constraints: []
+      - name: enterpriseBusinessDate
+        type: String
+        required: false
+        description: 营业期限
+        constraints: []
+      - name: enterpriseBusinessScope
+        type: String
+        required: false
+        description: 经营范围
+        constraints: []
+      - name: enterpriseLicense
+        type: String
+        required: false
+        description: 营业执照
+        constraints: []
+      - name: enterpriseCertificate
+        type: String
+        required: false
+        description: 证明函
+        constraints: []
+      - name: enterpriseStatus
+        type: Integer
+        required: false
+        description: 认证状态
+        constraints: []
+      - name: legalName
+        type: String
+        required: false
+        description: 经办人姓名
+        constraints: []
+      - name: legalCardId
+        type: String
+        required: false
+        description: 经办人身份证号
+        constraints: []
+      - name: legalPhone
+        type: String
+        required: false
+        description: 经办人手机号
+        constraints: []
+      - name: legalPhoneMask
+        type: String
+        required: false
+        description: ''
+        constraints: []
+      - name: legalUrlFront
+        type: String
+        required: false
+        description: 经办人身份证正面
+        constraints: []
+      - name: legalUrlBack
+        type: String
+        required: false
+        description: 经办人身份证反面
+        constraints: []
+      - name: modifierId
+        type: Long
+        required: false
+        description: 修改人id
+        constraints: []
+      - name: modifierName
+        type: String
+        required: false
+        description: 修改人名称
+        constraints: []
+  errors: []
+  source:
+    className: FoundationEnterpriseController
+    methodName: getEnterpriseInformation
+    signature: getEnterpriseInformation(QueryEnterpriseParam param)
+- identity:
+    operationId: user-center.innerapi.aiAgent.modifyEnterpriseInformation
+  semantic:
+    summary: 修改企业用户信息(统一入口)
+    description: 处理Modifyenterpriseinformation并返回结果
+  search:
+    intentAliases:
+    - 修改企业用户信息(统一入口)
+    - modifyEnterpriseInformation
+    - Object
+    - ModifyEnterpriseParam
+    - modify
+    - Enterprise
+    - Information
+    tags:
+    - modifyEnterpriseInformation
+    - ModifyEnterpriseParam
+    - Object
+  protocol:
+    httpMethod: REQUEST
+    path: /modifyEnterpriseInformation
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: ModifyEnterpriseParam
+      required: true
+      description: modifyEnterpriseInformation 请求体
+  response:
+    envelopeType: Response
+    dataType: Object
+    description: Modifyenterpriseinformation返回结果
+  schemas:
+    requestTypes:
+    - name: ModifyEnterpriseParam
+      fields:
+      - name: enterpriseId
+        type: String
+        required: true
+        description: 企业用户ID
+        constraints:
+        - '@NotEmpty'
+      - name: enterpriseCreditCode
+        type: String
+        required: false
+        description: 企业信用代码
+        constraints: []
+      - name: enterpriseName
+        type: String
+        required: false
+        description: 企业名称
+        constraints: []
+      - name: enterpriseLegalName
+        type: String
+        required: false
+        description: 法人代表
+        constraints: []
+      - name: enterpriseRegister
+        type: String
+        required: false
+        description: 注册资本
+        constraints: []
+      - name: enterpriseModel
+        type: String
+        required: false
+        description: 工商类型
+        constraints: []
+      - name: enterpriseResidence
+        type: String
+        required: false
+        description: 住所
+        constraints: []
+      - name: enterpriseRegisterDate
+        type: Date
+        required: false
+        description: 成立日期
+        constraints:
+        - '@JsonFormat'
+      - name: enterpriseBusinessDate
+        type: String
+        required: false
+        description: 营业期限
+        constraints:
+        - '@JsonFormat'
+      - name: enterpriseBusinessScope
+        type: String
+        required: false
+        description: 经营范围
+        constraints: []
+      - name: enterpriseLicense
+        type: String
+        required: false
+        description: 企业营业执照图片
+        constraints: []
+      - name: enterpriseCertificate
+        type: String
+        required: false
+        description: 证明函
+        constraints: []
+      - name: channel
+        type: String
+        required: true
+        description: 接口调用方
+        constraints:
+        - '@NotEmpty'
+      - name: modifierId
+        type: Long
+        required: false
+        description: 修改人id
+        constraints: []
+      - name: modifierName
+        type: String
+        required: false
+        description: 修改人名称
+        constraints: []
+      - name: modifyTime
+        type: Date
+        required: false
+        description: 修改时间
+        constraints: []
+    responseTypes: []
+  errors: []
+  source:
+    className: FoundationEnterpriseController
+    methodName: modifyEnterpriseInformation
+    signature: modifyEnterpriseInformation(ModifyEnterpriseParam param)
+- identity:
+    operationId: user-center.innerapi.aiAgent.logMessage
+  semantic:
+    summary: 记录企业名称变更日志
+    description: 处理Logenterprisechangeinfo并返回结果
+  search:
+    intentAliases:
+    - 记录企业名称变更日志
+    - logMessage
+    - Object
+    - EnterpriseLogParam
+    - logEnterpriseChangeInfo
+    - log
+    - Message
+    tags:
+    - logMessage
+    - logEnterpriseChangeInfo
+    - EnterpriseLogParam
+    - Object
+  protocol:
+    httpMethod: POST
+    path: /logEnterpriseChangeInfo
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: EnterpriseLogParam
+      required: true
+      description: logMessage 请求体
+  response:
+    envelopeType: Response
+    dataType: Object
+    description: Logenterprisechangeinfo返回结果
+  schemas:
+    requestTypes:
+    - name: EnterpriseLogParam
+      fields:
+      - name: oldEnterprise
+        type: UserEnterprise
+        required: false
+        description: ''
+        constraints: []
+      - name: newEnterprise
+        type: UserEnterprise
+        required: false
+        description: ''
+        constraints: []
+      - name: channel
+        type: String
+        required: false
+        description: ''
+        constraints: []
+      - name: type
+        type: int
+        required: false
+        description: ''
+        constraints: []
+    responseTypes: []
+  errors: []
+  source:
+    className: FoundationEnterpriseController
+    methodName: logMessage
+    signature: logMessage(EnterpriseLogParam param)

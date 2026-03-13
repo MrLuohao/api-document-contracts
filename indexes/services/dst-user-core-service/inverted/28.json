@@ -1,0 +1,10 @@
+{
+  "pr": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "录企业": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "information": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "ein": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "for": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "mod": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "记录": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

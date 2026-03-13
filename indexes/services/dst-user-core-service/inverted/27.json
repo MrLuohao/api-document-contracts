@@ -1,0 +1,28 @@
+{
+  "controller": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "用户": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "en": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "ten": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "mo": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "称变": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "更日": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

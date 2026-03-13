@@ -1,0 +1,12 @@
+{
+  "n并返": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation",
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "编辑": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "理lo": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}

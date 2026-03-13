@@ -1,0 +1,18 @@
+{
+  "list": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "vo": [
+    "user-center.innerapi.aiAgent.getEnterpriseInformation"
+  ],
+  "改企业": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation"
+  ],
+  "object": [
+    "user-center.innerapi.aiAgent.modifyEnterpriseInformation",
+    "user-center.innerapi.aiAgent.logMessage"
+  ],
+  "o并": [
+    "user-center.innerapi.aiAgent.logMessage"
+  ]
+}
