@@ -1,5 +1,9 @@
 {
   "ai": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
+  ],
+  "v1": [
+    "analytics.innerapi.aiAgent.collect"
   ]
 }

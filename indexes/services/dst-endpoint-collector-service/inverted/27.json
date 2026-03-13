@@ -1,5 +1,6 @@
 {
   "controller": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
   ],
   "认接": [

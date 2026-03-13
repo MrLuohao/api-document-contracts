@@ -1,8 +1,12 @@
 {
-  "理pi": [
-    "analytics.innerapi.aiAgent.ping"
+  "collect": [
+    "analytics.innerapi.aiAgent.collect"
   ],
   "回结果": [
+    "analytics.innerapi.aiAgent.collect",
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "理pi": [
     "analytics.innerapi.aiAgent.ping"
   ],
   "string": [

@@ -2,8 +2,8 @@
   "service": "dst-endpoint-collector-service",
   "version": 1,
   "updatedAt": "2026-03-13",
-  "controllerCount": 1,
-  "operationCount": 1,
+  "controllerCount": 2,
+  "operationCount": 2,
   "operationsFile": "operations.jsonl",
   "invertedDir": "inverted"
 }

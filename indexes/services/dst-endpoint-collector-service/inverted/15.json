@@ -1,4 +1,7 @@
 {
+  "lle": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "in": [
     "analytics.innerapi.aiAgent.ping"
   ],

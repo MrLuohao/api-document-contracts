@@ -1,4 +1,16 @@
 {
+  "埋点数": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "上报接": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "处理d": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "collect并返回结果": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "默认": [
     "analytics.innerapi.aiAgent.ping"
   ],

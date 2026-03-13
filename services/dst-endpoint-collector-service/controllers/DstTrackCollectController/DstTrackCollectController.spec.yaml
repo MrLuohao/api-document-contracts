@@ -1,0 +1,112 @@
+domain: analytics
+service: dst-endpoint-collector-service
+controller:
+  name: DstTrackCollectController
+  basePath: /api/v1/track
+  source:
+    repo: /Users/luohao/Desktop/DST/client-tracking/dst-endpoint-collector-service
+    file: src/main/java/com/dst/analytics/modules/track/controller/DstTrackCollectController.java
+methods:
+- identity:
+    operationId: analytics.innerapi.aiAgent.collect
+  semantic:
+    summary: 埋点数据上报接口
+    description: 处理DstTrackCollect并返回结果
+  search:
+    intentAliases:
+    - 埋点数据上报接口
+    - collect
+    - Boolean
+    - DstTrackCollectDTO
+    tags:
+    - collect
+    - DstTrackCollectDTO
+    - Boolean
+  protocol:
+    httpMethod: POST
+    path: ''
+  request:
+    headers: []
+    pathParams: []
+    queryParams: []
+    parts: []
+    body:
+      type: DstTrackCollectDTO
+      required: true
+      description: collect 请求体
+  response:
+    envelopeType: Response
+    dataType: Boolean
+    description: Boolean返回结果
+  schemas:
+    requestTypes:
+    - name: DstTrackCollectDTO
+      fields:
+      - name: appId
+        type: String
+        required: true
+        description: 应用标识，用于区分不同应用
+        constraints:
+        - '@NotBlank'
+      - name: appName
+        type: String
+        required: false
+        description: 应用名称
+        constraints: []
+      - name: uid
+        type: String
+        required: false
+        description: 用户唯一标识
+        constraints: []
+      - name: event
+        type: String
+        required: true
+        description: 事件名称，采用下划线命名
+        constraints:
+        - '@NotBlank'
+      - name: pagePath
+        type: String
+        required: true
+        description: 页面路径
+        constraints:
+        - '@NotBlank'
+      - name: time
+        type: Long
+        required: true
+        description: 客户端时间戳（毫秒）
+        constraints:
+        - '@NotNull'
+        - '@Min'
+      - name: platform
+        type: String
+        required: false
+        description: 平台标识
+        constraints: []
+      - name: device
+        type: String
+        required: false
+        description: 设备型号
+        constraints: []
+      - name: sessionId
+        type: String
+        required: false
+        description: 会话ID，用于追踪单次访问
+        constraints:
+        - '@Size'
+      - name: pageTitle
+        type: String
+        required: false
+        description: 页面标题
+        constraints:
+        - '@Size'
+      - name: properties
+        type: Map<String,Object>
+        required: false
+        description: 自定义事件属性
+        constraints: []
+    responseTypes: []
+  errors: []
+  source:
+    className: DstTrackCollectController
+    methodName: collect
+    signature: collect(DstTrackCollectDTO collectDTO, HttpServletRequest request)

@@ -1,11 +1,15 @@
 {
+  "ct": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "并返回": [
+    "analytics.innerapi.aiAgent.collect",
+    "analytics.innerapi.aiAgent.ping"
+  ],
   "理p": [
     "analytics.innerapi.aiAgent.ping"
   ],
   "ng并": [
-    "analytics.innerapi.aiAgent.ping"
-  ],
-  "并返回": [
     "analytics.innerapi.aiAgent.ping"
   ]
 }

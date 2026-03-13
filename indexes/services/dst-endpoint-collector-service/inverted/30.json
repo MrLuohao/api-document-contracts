@@ -1,14 +1,11 @@
 {
-  "oll": [
+  "数据上": [
     "analytics.innerapi.aiAgent.collect"
   ],
-  "boolean": [
+  "埋点数据上报接口": [
     "analytics.innerapi.aiAgent.collect"
   ],
-  "dto": [
+  "ds": [
     "analytics.innerapi.aiAgent.collect"
-  ],
-  "默认接": [
-    "analytics.innerapi.aiAgent.ping"
   ]
 }

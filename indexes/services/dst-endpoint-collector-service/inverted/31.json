@@ -1,11 +1,25 @@
 {
+  "dst": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "接口": [
+    "analytics.innerapi.aiAgent.collect",
+    "analytics.innerapi.aiAgent.ping"
+  ],
+  "据上报": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "st": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "co": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "并返": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
   ],
   "系统心跳默认接口": [
-    "analytics.innerapi.aiAgent.ping"
-  ],
-  "并返": [
     "analytics.innerapi.aiAgent.ping"
   ]
 }

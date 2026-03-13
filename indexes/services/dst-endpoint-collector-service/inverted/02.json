@@ -1,4 +1,13 @@
 {
+  "埋点": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "上报": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "报接口": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "跳默认": [
     "analytics.innerapi.aiAgent.ping"
   ]

@@ -1,4 +1,7 @@
 {
+  "ect": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "认接口": [
     "analytics.innerapi.aiAgent.ping"
   ]

@@ -1,5 +1,12 @@
 {
+  "api": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "理ds": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "返回结": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
   ]
 }

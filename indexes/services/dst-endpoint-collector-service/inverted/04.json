@@ -1,6 +1,13 @@
 {
   "analytics": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
+  ],
+  "数据": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "ct并": [
+    "analytics.innerapi.aiAgent.collect"
   ],
   "pin": [
     "analytics.innerapi.aiAgent.ping"

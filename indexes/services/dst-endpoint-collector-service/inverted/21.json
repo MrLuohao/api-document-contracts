@@ -1,6 +1,13 @@
 {
   "innerapi": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
+  ],
+  "track": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "t并": [
+    "analytics.innerapi.aiAgent.collect"
   ],
   "跳默": [
     "analytics.innerapi.aiAgent.ping"

@@ -1,4 +1,7 @@
 {
+  "报接": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "系统心": [
     "analytics.innerapi.aiAgent.ping"
   ]

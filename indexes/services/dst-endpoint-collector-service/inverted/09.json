@@ -1,5 +1,6 @@
 {
   "结果": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
   ]
 }

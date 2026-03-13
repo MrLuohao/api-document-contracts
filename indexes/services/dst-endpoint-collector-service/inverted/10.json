@@ -1,4 +1,13 @@
 {
+  "ll": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "le": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "ec": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
   "g并返": [
     "analytics.innerapi.aiAgent.ping"
   ]

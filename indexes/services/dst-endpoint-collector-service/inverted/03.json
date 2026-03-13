@@ -1,6 +1,16 @@
 {
   "agent": [
+    "analytics.innerapi.aiAgent.collect",
     "analytics.innerapi.aiAgent.ping"
+  ],
+  "据上": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "col": [
+    "analytics.innerapi.aiAgent.collect"
+  ],
+  "t并返": [
+    "analytics.innerapi.aiAgent.collect"
   ],
   "统心跳": [
     "analytics.innerapi.aiAgent.ping"
